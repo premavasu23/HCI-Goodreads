@@ -1,20 +1,27 @@
-
-
 .shelf {
-    width: 65vw;
-    margin: 2vw;
-    padding: 1vw;
-    background-color: #75420e;
-    display: flex;
-    border-radius: 0.5vw;
+  width: 65vw;
+  margin: 2vw;
+  padding: 1vw;
+  /* padding-left: 1vw;
+  padding-right: 1vw;
+  padding-bottom: 1vw; */
+  background-color: #75420e;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5vw;
+  align-items: flex-start;
 }
 
+.shelf-content {
+  display: flex;
+  width: 100%;
+}
 .books-container {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    width: 90%;
-    display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 90%;
+  display: flex;
 }
 
 ::-webkit-scrollbar {
@@ -42,4 +49,10 @@
     margin-left: 2.5vw;
     margin-right: 2.5vw;
     font-size: 2vw;
+}
+
+.shelf-title {
+  color: #ffffff;
+  padding-left: 1vw;
+  margin: 0;
 }

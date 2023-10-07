@@ -6,9 +6,9 @@ function App() {
     <div className="App">
 
       <p>Nav Bar Under Construction</p>
-      <Shelf></Shelf>
-      <Shelf></Shelf>
-      <Shelf></Shelf>
+      <Shelf shelfTitle="Currently Reading"></Shelf>
+      <Shelf shelfTitle="TBR"></Shelf>
+      <Shelf shelfTitle="Already Read"></Shelf>
 
     </div>
   );

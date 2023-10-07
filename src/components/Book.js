@@ -7,12 +7,14 @@ const Book = (props) => {
     return (
         <div>
             <div className="indiv-book-container">
-                <img className="book-cover" src={props.cover}>
-
-                </img>
-                <div className="title">[Book Title Here]</div>
-                <div className="author">by [Book Author Here]</div>
+                <img className="book-cover" src={props.book.cover}></img>
+                <div className="title">{props.book.title}</div>
+                <div className="author">{"by "+props.book.author}</div>
+                <div className="below-book-content">
+                    progress / stars
+                </div>
             </div>
+
         </div>
         
     );

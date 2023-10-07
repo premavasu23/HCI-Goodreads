@@ -1,25 +1,30 @@
 import React from "react";
 import Book from '../components/Book'
 import '../styles/Shelf.css'
+import BookList from "../data/BookList";
 
 const Shelf = (props) => {
     
     return (
     <div className="shelf">
-        <div className="books-container">
-            <Book cover={require('../images/pjo_1.jpg')}></Book>
-            <Book cover={require('../images/pjo_2.jpg')}></Book>
-            <Book cover={require('../images/pjo_3.jpg')}></Book>
-            <Book cover={require('../images/pjo_4.jpg')}></Book>
-            <Book cover={require('../images/pjo_5.jpg')}></Book>
-            <Book cover={require('../images/hunger_games.jpg')}></Book>
-            <Book cover={require('../images/catching_fire.jpg')}></Book>
-            <Book cover={require('../images/mockingjay.jpg')}></Book>
+        <h3 className="shelf-title">{props.shelfTitle}</h3>
+        <div className="shelf-content">
+            <div className="books-container">
+                <Book book={BookList[0]}></Book>
+                <Book book={BookList[1]}></Book>
+                <Book book={BookList[2]}></Book>
+                <Book book={BookList[3]}></Book>
+                <Book book={BookList[4]}></Book>
+                <Book book={BookList[5]}></Book>
+                <Book book={BookList[6]}></Book>
+                <Book book={BookList[7]}></Book>
+                <Book book={BookList[0]}></Book>
+                <Book book={BookList[1]}></Book>
 
+            </div>
 
+            <button className="add-button">+</button>
         </div>
-
-        <button className="add-button">+</button>
     </div>
     );
 };

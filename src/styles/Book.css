@@ -4,9 +4,22 @@
     padding: 0.5vw;
     background-color: #553b08;
     color: #ffffff;
+    min-height: 16vw;
 }
 .book-cover {
-    width: 5vw;
+    max-height: 10vw;
+    height: auto;
+    max-width: 10vw;
+    width: auto;
+    /* width: 5vw; */
+
+
+    /* .BeerListItem-img {
+        height: auto;
+        max-height: 250px;
+        width: auto;
+        max-width: 250px;
+      } */
 }
 
 .title {
@@ -21,4 +34,13 @@
     width: inherit;
     font-size: 0.5vw;
     text-wrap: wrap;
+}
+
+.below-book-content {
+    background-color: #ffffff;
+    /* width: 8vw; */
+    height: 1.5vw;
+    margin-top: 1.5vw;
+    color: #553b08;
+    font-size: x-small;
 }
