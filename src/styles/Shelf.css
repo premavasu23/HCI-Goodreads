@@ -1,6 +1,8 @@
 .shelf {
   width: 65vw;
-  margin: 2vw;
+  margin-top: 0.5vw;
+  margin-bottom: 1vw;
+  margin-left: 2vw;
   padding: 1vw;
   /* padding-left: 1vw;
   padding-right: 1vw;
