@@ -5,8 +5,11 @@ function App() {
   return (
     <div className="App">
 
-      <p>Hello World</p>
+      <p>Nav Bar Under Construction</p>
       <Shelf></Shelf>
+      <Shelf></Shelf>
+      <Shelf></Shelf>
+
     </div>
   );
 }

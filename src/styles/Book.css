@@ -1,0 +1,24 @@
+.indiv-book-container {
+    margin: 0.5vw;
+    width: 8vw;
+    padding: 0.5vw;
+    background-color: #553b08;
+    color: #ffffff;
+}
+.book-cover {
+    width: 5vw;
+}
+
+.title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: inherit;
+    font-size: 0.75vw;
+    text-wrap: wrap;
+}
+
+.author {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: inherit;
+    font-size: 0.5vw;
+    text-wrap: wrap;
+}

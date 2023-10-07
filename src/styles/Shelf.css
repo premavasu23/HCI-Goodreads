@@ -1,20 +1,20 @@
 
 
 .shelf {
-    color: black;
-    width: 70vw;
-    margin: 5vw;
+    width: 65vw;
+    margin: 2vw;
     padding: 1vw;
-    background-color: blueviolet;
+    background-color: #75420e;
     display: flex;
     border-radius: 0.5vw;
 }
 
-.book-container {
+.books-container {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    width: 90%
+    width: 90%;
+    display: flex;
 }
 
 ::-webkit-scrollbar {
@@ -38,13 +38,8 @@
     background: #555;
   }
 
-.card {
-    display: inline-block;
-    padding: 2vw;
-    background-color:aquamarine;
-    margin: 1vw;
-}
-
-.button {
-    margin: 2vw;
+.add-button {
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    font-size: 2vw;
 }
