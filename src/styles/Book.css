@@ -2,9 +2,10 @@
     margin: 0.5vw;
     width: 8vw;
     padding: 0.5vw;
-    background-color: #553b08;
     color: #ffffff;
     min-height: 12vw;
+    border-radius: 0.25vw;
+
 }
 .book-cover {
     max-height: 8vw;
