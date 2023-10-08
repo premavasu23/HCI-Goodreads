@@ -5,8 +5,8 @@ const BookList = [
         cover: require('../images/pjo_1.jpg'),
         generalRating: 0,
         personalRating: 0,
-        isCurrentlyReading: true, 
-        isTBR: true,
+        isCurrentlyReading: false, 
+        isTBR: false,
         isAlreadyRead: true,
         isRecommended: true
     },
@@ -16,8 +16,8 @@ const BookList = [
         cover: require('../images/pjo_2.jpg'),
         generalRating: 0,
         personalRating: 0,
-        isCurrentlyReading: true, 
-        isTBR: true,
+        isCurrentlyReading: false, 
+        isTBR: false,
         isAlreadyRead: true,
         isRecommended: true
     },    
@@ -28,8 +28,8 @@ const BookList = [
         generalRating: 0,
         personalRating: 0,
         isCurrentlyReading: true, 
-        isTBR: true,
-        isAlreadyRead: true,
+        isTBR: false,
+        isAlreadyRead: false,
         isRecommended: true
     },    
     {
@@ -38,9 +38,9 @@ const BookList = [
         cover: require('../images/pjo_4.jpg'),
         generalRating: 0,
         personalRating: 0,
-        isCurrentlyReading: true, 
+        isCurrentlyReading: false, 
         isTBR: true,
-        isAlreadyRead: true,
+        isAlreadyRead: false,
         isRecommended: true
     },    
     {
@@ -49,9 +49,9 @@ const BookList = [
         cover: require('../images/pjo_5.jpg'),
         generalRating: 0,
         personalRating: 0,
-        isCurrentlyReading: true, 
+        isCurrentlyReading: false, 
         isTBR: true,
-        isAlreadyRead: true,
+        isAlreadyRead: false,
         isRecommended: true
     },    
     {
@@ -60,8 +60,8 @@ const BookList = [
         cover: require('../images/hunger_games.jpg'),
         generalRating: 0,
         personalRating: 0,
-        isCurrentlyReading: true, 
-        isTBR: true,
+        isCurrentlyReading: false, 
+        isTBR: false,
         isAlreadyRead: true,
         isRecommended: true
     },    
@@ -72,8 +72,8 @@ const BookList = [
         generalRating: 0,
         personalRating: 0,
         isCurrentlyReading: true, 
-        isTBR: true,
-        isAlreadyRead: true,
+        isTBR: false,
+        isAlreadyRead: false,
         isRecommended: true
     },    
     {
@@ -82,9 +82,9 @@ const BookList = [
         cover: require('../images/mockingjay.jpg'),
         generalRating: 0,
         personalRating: 0,
-        isCurrentlyReading: true, 
+        isCurrentlyReading: false, 
         isTBR: true,
-        isAlreadyRead: true,
+        isAlreadyRead: false,
         isRecommended: true
     },    
     
