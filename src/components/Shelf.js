@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Button from '@mui/material/Button';
 import Book from '../components/Book'
 import '../styles/Shelf.css'
 import BookList from "../data/BookList";
@@ -47,8 +48,8 @@ const Shelf = (props) => {
                 <Book book={BookList[1]}></Book> */}
 
             </div>
-
-            <button className="add-button">+</button>
+            <Button className="add-button" variant="contained" sx={{"color": "#F9F7F4", "backgroundColor": "#75420e"}}>+</Button>
+            
         </div>
     </div>
     );
