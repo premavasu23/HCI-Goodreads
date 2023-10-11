@@ -200,7 +200,7 @@ const BookList = [
     {
         title: "Six of Crows",
         author: "Leigh Bardugo",
-        cover: require('../images/six_of_crows.png'),
+        cover: require('../images/six_of_crows.jpg'),
         generalRating: 0,
         personalRating: 0,
         isCurrentlyReading: false, 
