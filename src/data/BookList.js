@@ -8,7 +8,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },
     {
         title: "Percy Jackson and the Sea of Monsters",
@@ -19,7 +24,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },    
     {
         title: "Percy Jackson and the Titans Curse",
@@ -30,7 +40,12 @@ const BookList = [
         isCurrentlyReading: true, 
         isTBR: false,
         isAlreadyRead: false,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },    
     {
         title: "Percy Jackson and the Battle of the Labrynth",
@@ -41,7 +56,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: true,
         isAlreadyRead: false,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },    
     {
         title: "Percy Jackson and the Last Olympian",
@@ -52,7 +72,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: true,
         isAlreadyRead: false,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },    
     {
         title: "The Hunger Games",
@@ -63,7 +88,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },    
     {
         title: "Catching Fire",
@@ -74,7 +104,12 @@ const BookList = [
         isCurrentlyReading: true, 
         isTBR: false,
         isAlreadyRead: false,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },    
     {
         title: "MockingJay",
@@ -85,7 +120,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: true,
         isAlreadyRead: false,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },
     {
         title: "All About Love",
@@ -96,7 +136,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },
     {
         title: "Children of Blood and Bone",
@@ -107,7 +152,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },
     {
         title: "Children of Virtue and Vengence ",
@@ -118,7 +168,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },
     {
         title: "Get a life Chloe Brown",
@@ -129,7 +184,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },
     {
         title: "Take a Hint Dani Brown",
@@ -140,7 +200,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },
     {
         title: "Act Your Age Eve Brown",
@@ -151,7 +216,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },
     {
         title: "Circe",
@@ -162,7 +232,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },
     {
         title: "Fourth Wing",
@@ -173,7 +248,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },
     {
         title: "Pride and Prejudice",
@@ -184,7 +264,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },
     {
         title: "Sense and Sensibility",
@@ -195,7 +280,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },
     {
         title: "Six of Crows",
@@ -206,7 +296,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },
     {
         title: "Crooked Kingdom",
@@ -217,7 +312,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },
     {
         title: "The No Show",
@@ -228,7 +328,12 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true
+        isRecommended: true,
+        pageTotal: 100,
+        progressPages: 20,
+        progressPercent: 0.20,
+        communityStar: 4.5,
+        userStar: 3
     },
     
   ];
