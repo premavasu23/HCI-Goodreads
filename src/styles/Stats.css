@@ -1,0 +1,15 @@
+.stats{
+    width: 30vw;
+    margin-top: 0.5vw;
+    margin-bottom: 1vw;
+    margin-left: 2vw;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.25vw;
+    border-width: 1px;
+    align-items: flex-start;
+    border-style: solid;
+    border-color: #75420e;
+    color: 	#553b08;
+}

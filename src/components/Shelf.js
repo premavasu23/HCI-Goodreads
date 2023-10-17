@@ -26,7 +26,8 @@ const Shelf = (props) => {
     
     return (
     <div className="shelf">
-        <h3 className="shelf-title">{props.shelfTitle}</h3>
+        <h3 className="shelf-title">{props.shelfTitle} </h3>
+        <p className="shelf-count">({shelfBookList.length} Books)</p>
         <div className="shelf-content">
             <div className="books-container">
 
