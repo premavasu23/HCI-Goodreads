@@ -1,8 +1,10 @@
 import React from 'react';
+import '../styles/Challenge.css'
+
 // import { Link } from 'react-router-dom';
 const Challenge = () => {
     return (
-        <div>
+        <div className = "challenge">
            Challenge
         </div>
     );

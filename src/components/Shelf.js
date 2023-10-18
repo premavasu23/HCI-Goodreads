@@ -20,34 +20,18 @@ const Shelf = (props) => {
         }
       }, [props]);
 
-
-
-    
     
     return (
     <div className="shelf">
         <h3 className="shelf-title">{props.shelfTitle} </h3>
-        <p className="shelf-count">({shelfBookList.length} Books)</p>
+        <p className="shelf-count">{shelfBookList.length} Books</p>
         <div className="shelf-content">
             <div className="books-container">
-
                 {
                     shelfBookList.map((b) => (
                         <Book book={b}></Book>
                     ))
                 }
-
-                {/* <Book book={BookList[0]}></Book>
-                <Book book={BookList[1]}></Book>
-                <Book book={BookList[2]}></Book>
-                <Book book={BookList[3]}></Book>
-                <Book book={BookList[4]}></Book>
-                <Book book={BookList[5]}></Book>
-                <Book book={BookList[6]}></Book>
-                <Book book={BookList[7]}></Book>
-                <Book book={BookList[0]}></Book>
-                <Book book={BookList[1]}></Book> */}
-
             </div>
             <Button className="add-button" variant="contained" sx={{"color": "#F9F7F4", "backgroundColor": "#75420e"}}>+</Button>
             

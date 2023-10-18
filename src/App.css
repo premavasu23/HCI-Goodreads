@@ -6,3 +6,10 @@
 .Shelves {
   float: left;
 }
+
+.right-side{
+  padding-left: 5px;
+  padding-left: 3px;
+
+  float:right
+}

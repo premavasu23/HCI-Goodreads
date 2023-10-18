@@ -12,7 +12,7 @@ function App() {
         <Shelf type="isTBR" shelfTitle="TBR"></Shelf>
         <Shelf type="isAlreadyRead" shelfTitle="Already Read"></Shelf>
       </div>
-      <div>
+      <div className = "right-side">
         <Challenge></Challenge>
         <Stats></Stats>
       </div>
