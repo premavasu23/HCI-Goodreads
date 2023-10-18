@@ -2,9 +2,11 @@
     margin: 0.5vw;
     width: 8vw;
     padding: 0.5vw;
-    color: #ffffff;
     min-height: 12vw;
     border-radius: 0.25vw;
+    display: grid;
+    justify-items: center;
+    align-content: space-between;
 
 }
 .book-cover {
@@ -30,8 +32,6 @@
 
 .below-book-content {
     background-color: #ffffff;
-    /* width: 8vw; */
-    /* height: 1.5vw; */
     margin-top: 0.5vw;
     color: #553b08;
     font-size: x-small;
