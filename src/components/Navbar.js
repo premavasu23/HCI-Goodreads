@@ -14,7 +14,7 @@ function Navbar() {
 
 	return (
 		<header>
-			<img src="https://s.gr-assets.com/assets/home/header_logo-8d96d7078a3d63f9f31d92282fd67cf4.png"/>
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Goodreads_logo.svg/2560px-Goodreads_logo.svg.png"/>
 			<nav ref={navRef}>
 				<a href="/#"> <FaHome /> Home</a>
 				<a href="/#"> <FaBookOpen /> MyBooks</a>

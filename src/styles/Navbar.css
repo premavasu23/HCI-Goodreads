@@ -5,8 +5,12 @@
 	box-sizing: border-box;
     font-family: Helvetica, Sans-Serif;}
 
+img{
+    width: 10rem;
+}
+
 :root {
-	--mainColor: 	#e9e5cd;
+	--mainColor: 	#d8ccb1;
 	--mainColorLight: #5767aa;
 	--secondaryColor: white;
 	--textColor: #75420e;
@@ -21,6 +25,9 @@ header {
 	color: var(--textColor);
 }
 
+nav img {
+    size: 15rem;
+}
 nav a {
 	margin: 0 2rem;
 	color: var(--textColor);
