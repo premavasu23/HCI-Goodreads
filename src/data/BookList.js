@@ -1,6 +1,6 @@
 const BookList = [
     {
-        title: "Percy Jackson and the Lightning Theif",
+        title: "Percy Jackson and the Lightning Thief",
         author: "Rick Riordan",
         cover: require('../images/pjo_1.jpg'),
         generalRating: 0,

@@ -79,8 +79,9 @@ const Shelf = (props) => {
                 onClose={handleClose}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
+                sx={{overflow:"auto"}}
             >
-            <AddBookModal/>
+            <AddBookModal shelfType={props.type} shelfTitle={props.shelfTitle} shelfBookList={shelfBookList}/>
         </Modal>
         </div>
     </div>
