@@ -1,7 +1,7 @@
 .challenge{
     width: 25vw;
-    height: 2vw;
-    margin-top: 0.5vw;
+    height: 5vw;
+    margin-top: 0.25vw;
     margin-bottom: 1vw;
     margin-left: 2vw;
     padding: 1vw;
@@ -13,6 +13,5 @@
     border-style: solid;
     border-color: #75420e;
     color: 	#553b08;
-    overflow-y: scroll;
-    overflow-x: hidden;
+
 }

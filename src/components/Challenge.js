@@ -5,7 +5,7 @@ import '../styles/Challenge.css'
 const Challenge = () => {
     return (
         <div className = "challenge">
-           Challenge
+           <h3>Challenge</h3>
         </div>
     );
 };

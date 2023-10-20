@@ -20,6 +20,8 @@ const Stats = (props) => {
                 <p>0 - 100 pages:</p>
                 <p>100 - 200 pages:</p>
                 <p>200 - 300 pages:</p>
+                <p>300 - 400 pages:</p>
+                <p>400 - 500 pages:</p>
             </div>
         </div>
     );
