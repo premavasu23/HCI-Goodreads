@@ -29,7 +29,7 @@ const Book = (props) => {
                     display: "grid",
                     justifyItems: "center",
                     alignContent: "space-between",
-                    margin: "2vw",
+                    margin: "0.5vw",
                 }}>
                 <img className="book-cover" src={props.book.cover}></img>
                 <div className="title">{props.book.title}</div>
