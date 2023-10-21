@@ -21,6 +21,7 @@
     width: inherit;
     font-size: 0.75vw;
     text-wrap: wrap;
+    text-align: center;
 }
 
 .author {
@@ -28,6 +29,7 @@
     width: inherit;
     font-size: 0.5vw;
     text-wrap: wrap;
+    text-align: center;
 }
 
 .below-book-content {
