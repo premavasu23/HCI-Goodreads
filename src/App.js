@@ -1,12 +1,13 @@
 import './App.css';
 import Shelf from './components/Shelf'
+import Navbar from './components/Navbar';
 import Stats from './components/Stats'
 import Challenge from './components/Challenge'
 
 function App() {
   return (
     <div className>
-      <p className = "Nav"> Nav Bar</p>
+      <Navbar />
       <div className="Shelves">
         <Shelf type="isCurrentlyReading" shelfTitle="Currently Reading"></Shelf>
         <Shelf type="isTBR" shelfTitle="TBR"></Shelf>
