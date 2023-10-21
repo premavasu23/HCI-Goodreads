@@ -1,19 +1,19 @@
 .indiv-book-container {
-    margin: 0.5vw;
     width: 8vw;
-    padding: 0.5vw;
     min-height: 12vw;
     border-radius: 0.25vw;
     display: grid;
     justify-items: center;
     align-content: space-between;
+    margin: 2vw;
 
 }
 .book-cover {
-    max-height: 8vw;
+    max-height: 10vw;
     height: auto;
-    max-width: 10vw;
+    max-width: 8vw;
     width: auto;
+    margin: 0.75vh;
 }
 
 .title {
@@ -37,4 +37,5 @@
     margin-top: 0.5vw;
     color: #553b08;
     font-size: x-small;
+    text-align: center;
 }

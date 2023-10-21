@@ -38,7 +38,7 @@ const BookDisplay = (props) => {
             left: '50%',
             transform: 'translate(-50%, -50%)',
             width: "30vw",
-            height: "22vh",
+            height: "24vh",
             bgcolor: 'background.paper',
             boxShadow: 24,
             p: 4,
@@ -46,6 +46,7 @@ const BookDisplay = (props) => {
             borderRadius: '1vh',
             mt:"0.75vh",
             mb:"0.75vh",
+            margin: "0.75vh",
             padding: "1vh"
             }}>
                 <Stack direction="row" spacing={2} justifyContent="space-between">
@@ -67,7 +68,7 @@ const BookDisplay = (props) => {
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
                 width: "20vw",
-                height: "22vh",
+                height: "24vh",
                 bgcolor: 'background.paper',
                 boxShadow: 24,
                 p: 4,

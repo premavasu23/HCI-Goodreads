@@ -19,10 +19,18 @@ const Book = (props) => {
         <div>
             <List>
                 <ListItemButton onClick={handleBookPress}>
-                <Paper className="indiv-book-container" elevation={3} 
-            sx={{
-                "background-color": "#F9F7F4"
-            }}>
+                <Paper elevation={3} 
+                sx={{
+                    backgroundColor: "#F9F7F4",
+                    paddingRight: "0.3vw",
+                    width: "8vw",
+                    minHeight: "12vw",
+                    borderRadius: "0.25vw",
+                    display: "grid",
+                    justifyItems: "center",
+                    alignContent: "space-between",
+                    margin: "2vw",
+                }}>
                 <img className="book-cover" src={props.book.cover}></img>
                 <div className="title">{props.book.title}</div>
                 <div className="author">{"by "+props.book.author}</div>
