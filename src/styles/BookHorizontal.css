@@ -1,40 +1,31 @@
-.indiv-book-container {
-    margin: 0.5vw;
-    width: 8vw;
-    padding: 0.5vw;
-    min-height: 12vw;
-    border-radius: 0.25vw;
-    display: grid;
-    justify-items: center;
-    align-content: space-between;
-
-}
-.book-cover {
-    max-height: 8vw;
+.book-cover-horizontal {
+    max-height: 10vw;
     height: auto;
-    max-width: 10vw;
+    max-width: 8vw;
     width: auto;
+    margin: 0.75vh;
 }
 
-.title {
+.title-horizontal {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: inherit;
-    font-size: 0.75vw;
+    font-size: 1.2vw;
     text-wrap: wrap;
     text-align: center;
 }
 
-.author {
+.author-horizontal {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: inherit;
-    font-size: 0.5vw;
+    font-size: 1vw;
     text-wrap: wrap;
     text-align: center;
 }
 
-.below-book-content {
+.below-book-content-horizontal {
     background-color: #ffffff;
-    margin-top: 0.5vw;
+    margin-top: 1vw;
     color: #553b08;
     font-size: x-small;
+    text-align: center;
 }
