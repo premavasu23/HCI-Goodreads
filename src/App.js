@@ -3,6 +3,7 @@ import Shelf from './components/Shelf'
 import Navbar from './components/Navbar';
 import Stats from './components/Stats'
 import Challenge from './components/Challenge'
+import Recommendations from './components/Recommendations'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <div className = "right-side">
         <Challenge></Challenge>
         <Stats></Stats>
+        <Recommendations type="isRecommended" shelfTitle="Recommendations"></Recommendations>
       </div>
     </div>
     

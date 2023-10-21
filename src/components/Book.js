@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import '../styles/Book.css'
-import Paper from '@mui/material/Paper';
+import {Paper, List, ListItemButton, Modal, Box} from '@mui/material';
+import BookDisplay from '../components/BookDisplay'
+import BookList from "../data/BookList";
 
 const Book = (props) => {
+    const [openBookDisplay, setOpenBookDisplay] = useState(false);
 
+    const handleBookClose = () => setOpenBookDisplay(false);
+
+
+    const handleBookPress = () => {
+        setOpenBookDisplay(true);
+
+    }
     
     return (
         <div>
-            <Paper className="indiv-book-container" elevation={3} 
+            <List>
+                <ListItemButton onClick={handleBookPress}>
+                <Paper className="indiv-book-container" elevation={3} 
             sx={{
                 "background-color": "#F9F7F4"
             }}>
@@ -18,6 +30,17 @@ const Book = (props) => {
                     progress / stars
                 </div>
             </Paper>
+                </ListItemButton>
+            </List>
+            <Modal 
+                open={openBookDisplay}
+                onClose={handleBookClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+                sx={{overflow:"auto"}}
+            >
+                <BookDisplay book={props.book} shelfType={props.shelfType}/>
+        </Modal>
 
         </div>
         
