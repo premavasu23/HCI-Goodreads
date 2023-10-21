@@ -54,7 +54,7 @@ const Shelf = (props) => {
             <div className="books-container">
                 {
                     shelfBookList.map((b) => (
-                        <Book book={b}></Book>
+                        <Book book={b} shelfType={props.type}></Book>
                     ))
                 }
             </div>
