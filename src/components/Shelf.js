@@ -20,7 +20,6 @@ const modalStyle = {
 
 const Shelf = (props) => {
 
-    const [shelfBookList, setShelfBookList] = useState([]);
     const [showAddBooks, setShowAddBooks] = useState(false);
     const [openAddBooksModal, setOpenAddBooksModal] = useState(false);
 
@@ -31,23 +30,6 @@ const Shelf = (props) => {
         setOpenAddBooksModal(true);
 
     }
-
-
-    useEffect(() => {
-        if(props.type === "isCurrentlyReading") {
-            setShelfBookList(BookList.filter((b) => b.isCurrentlyReading === true))
-        }
-        else if(props.type === "isTBR") {
-            setShelfBookList(BookList.filter((b) => b.isTBR === true))
-        }
-        else if(props.type === "isAlreadyRead") {
-            setShelfBookList(BookList.filter((b) => b.isAlreadyRead === true))
-        }
-      }, [props]);
-
-
-
-    
     
     return (
     <div className="shelf">
@@ -56,21 +38,10 @@ const Shelf = (props) => {
             <div className="books-container">
 
                 {
-                    shelfBookList.map((b) => (
+                    props.content.map((b) => (
                         <Book book={b}></Book>
                     ))
                 }
-
-                {/* <Book book={BookList[0]}></Book>
-                <Book book={BookList[1]}></Book>
-                <Book book={BookList[2]}></Book>
-                <Book book={BookList[3]}></Book>
-                <Book book={BookList[4]}></Book>
-                <Book book={BookList[5]}></Book>
-                <Book book={BookList[6]}></Book>
-                <Book book={BookList[7]}></Book>
-                <Book book={BookList[0]}></Book>
-                <Book book={BookList[1]}></Book> */}
 
             </div>
             <Button className="add-button" variant="contained" sx={{"color": "#F9F7F4", "backgroundColor": "#75420e"}} onClick={handleAddPress}>+</Button>
@@ -81,7 +52,7 @@ const Shelf = (props) => {
                 aria-describedby="modal-modal-description"
                 sx={{overflow:"auto"}}
             >
-            <AddBookModal shelfType={props.type} shelfTitle={props.shelfTitle} shelfBookList={shelfBookList}/>
+            <AddBookModal shelfType={props.type} shelfTitle={props.shelfTitle} bookList={props.bookList} setBookList={props.setBookList}/>
         </Modal>
         </div>
     </div>
