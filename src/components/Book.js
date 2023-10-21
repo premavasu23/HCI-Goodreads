@@ -31,7 +31,7 @@ const Book = (props) => {
                     alignContent: "space-between",
                     margin: "2vw",
                 }}>
-                <img className="book-cover" src={props.book.cover}></img>
+                <img className="book-cover" src={require('../images/' + props.book.cover)}></img>
                 <div className="title">{props.book.title}</div>
                 <div className="author">{"by "+props.book.author}</div>
                 <div className="below-book-content">
