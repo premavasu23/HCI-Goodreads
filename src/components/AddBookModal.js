@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Box, Typography, IconButton, Modal, TextField } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import BookHorizontal from './BookHorizontal'
-import BookList from "../data/BookList";
 
 const boxStyle = {
     position: 'absolute',
@@ -36,20 +35,20 @@ const AddBookModal = (props) => {
 
     const handleSearchClick = (e) => {
         setShowSearchResults(true);
-        setSearchResults(BookList.filter((b) => (b.title.toLowerCase().includes(searchValue.toLowerCase()) || b.author.toLowerCase().includes(searchValue.toLowerCase()))));
+        setSearchResults(props.bookList.filter((b) => (b.title.toLowerCase().includes(searchValue.toLowerCase()) || b.author.toLowerCase().includes(searchValue.toLowerCase()))));
         console.log(searchResults);
 
     }
 
     useEffect(() => {
-        if (props.shelfType === "isCurrentlyReading") {
-            setShelfBookList(BookList.filter((b) => b.isCurrentlyReading === false))
+        if(props.shelfType === "isCurrentlyReading") {
+            setShelfBookList(props.bookList.filter((b) => b.isCurrentlyReading === false))
         }
-        else if (props.shelfType === "isTBR") {
-            setShelfBookList(BookList.filter((b) => b.isTBR === false))
+        else if(props.shelfType === "isTBR") {
+            setShelfBookList(props.bookList.filter((b) => b.isTBR === false))
         }
-        else if (props.shelfType === "isAlreadyRead") {
-            setShelfBookList(BookList.filter((b) => b.isAlreadyRead === false))
+        else if(props.shelfType === "isAlreadyRead") {
+            setShelfBookList(props.bookList.filter((b) => b.isAlreadyRead === false))
         }
     }, [props]);
 
@@ -62,16 +61,16 @@ const AddBookModal = (props) => {
                 </IconButton>
             </Box>
             {(showSearchResults === false || searchValue.length === 0) && (
-                shelfBookList.map((b) => (
-                    <BookHorizontal book={b} shelfType={props.shelfType}></BookHorizontal>
-                )))
-            }
+                    shelfBookList.map((b) => (
+                        <BookHorizontal book={b} shelfType={props.shelfType} bookList={props.bookList} setBookList={props.setBookList}></BookHorizontal>
+                    )))
+                    }
             {(showSearchResults === true) && (
-                searchResults.map((b) => (
-                    <BookHorizontal book={b} shelfType={props.shelfType}></BookHorizontal>
-                )))
-            }
-
+                    searchResults.map((b) => (
+                        <BookHorizontal book={b} shelfType={props.shelfType} bookList={props.bookList} setBookList={props.setBookList}></BookHorizontal>
+                    )))
+                    }
+            
         </Box>
     );
 };
