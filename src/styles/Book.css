@@ -1,19 +1,19 @@
 .indiv-book-container {
+    margin: 0.5vw;
     width: 8vw;
+    padding: 0.5vw;
     min-height: 12vw;
     border-radius: 0.25vw;
     display: grid;
     justify-items: center;
     align-content: space-between;
-    margin: 2vw;
 
 }
 .book-cover {
-    max-height: 10vw;
+    max-height: 8vw;
     height: auto;
-    max-width: 8vw;
+    max-width: 10vw;
     width: auto;
-    margin: 0.75vh;
 }
 
 .title {
@@ -21,7 +21,6 @@
     width: inherit;
     font-size: 0.75vw;
     text-wrap: wrap;
-    text-align: center;
 }
 
 .author {
@@ -29,7 +28,6 @@
     width: inherit;
     font-size: 0.5vw;
     text-wrap: wrap;
-    text-align: center;
 }
 
 .below-book-content {
@@ -37,5 +35,4 @@
     margin-top: 0.5vw;
     color: #553b08;
     font-size: x-small;
-    text-align: center;
 }

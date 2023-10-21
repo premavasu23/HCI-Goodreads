@@ -1,14 +1,3 @@
-.Nav {
+.App {
   text-align: center;
-  padding-bottom: 1vmin;
-}
-
-.Shelves {
-  float: left;
-}
-
-.right-side{
-  padding-right: 6px;
-
-  float:right
 }

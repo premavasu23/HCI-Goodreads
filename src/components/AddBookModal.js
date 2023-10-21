@@ -15,7 +15,6 @@ const boxStyle = {
     p: 4,
     display: 'column', 
     overflow: "auto",
-    borderRadius: '1vh',
 };
   
 

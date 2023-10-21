@@ -2,10 +2,6 @@ import './App.css';
 import Shelf from './components/Shelf'
 import './data/BookList.json'
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Stats from './components/Stats'
-import Challenge from './components/Challenge'
-import Recommendations from './components/Recommendations'
 
 function App() {
 
@@ -47,9 +43,7 @@ function App() {
       <Shelf type="isAlreadyRead" content={isAlreadyReadList} shelfTitle="Already Read" bookList={bookList} setBookList={setBookList}></Shelf>
 
     </div>
-    
   );
 }
 
 export default App;
-// border: 5px solid #75420e;

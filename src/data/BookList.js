@@ -8,9 +8,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true,
-        pageLength: 377,
-        genres: ["Fiction", "Fantasy"]
+        isRecommended: true
     },
     {
         title: "Percy Jackson and the Sea of Monsters",
@@ -21,9 +19,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true,
-        pageLength: 279,
-        genres: ["Fiction", "Fantasy"]
+        isRecommended: true
     },    
     {
         title: "Percy Jackson and the Titans Curse",
@@ -34,12 +30,10 @@ const BookList = [
         isCurrentlyReading: true, 
         isTBR: false,
         isAlreadyRead: false,
-        isRecommended: true,
-        pageLength: 213,
-        genres: ["Fiction", "Fantasy"]
+        isRecommended: true
     },    
     {
-        title: "Percy Jackson and the Battle of the Labyrinth",
+        title: "Percy Jackson and the Battle of the Labrynth",
         author: "Rick Riordan",
         cover: require('../images/pjo_4.jpg'),
         generalRating: 0,
@@ -47,9 +41,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: true,
         isAlreadyRead: false,
-        isRecommended: true,
-        pageLength: 361,
-        genres: ["Fiction", "Fantasy"]
+        isRecommended: true
     },    
     {
         title: "Percy Jackson and the Last Olympian",
@@ -60,9 +52,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: true,
         isAlreadyRead: false,
-        isRecommended: true,
-        pageLength: 381,
-        genres: ["Fiction", "Fantasy"]
+        isRecommended: true
     },    
     {
         title: "The Hunger Games",
@@ -73,9 +63,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true, 
-        pageLength: 374,
-        genres: ["Fiction", "Dystopian"]
+        isRecommended: true
     },    
     {
         title: "Catching Fire",
@@ -86,9 +74,7 @@ const BookList = [
         isCurrentlyReading: true, 
         isTBR: false,
         isAlreadyRead: false,
-        isRecommended: true,
-        pageLength: 391,
-        genres: ["Fiction", "Dystopian"]
+        isRecommended: true
     },    
     {
         title: "MockingJay",
@@ -99,9 +85,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: true,
         isAlreadyRead: false,
-        isRecommended: true,
-        pageLength: 390,
-        genres: ["Fiction", "Dystopian"]
+        isRecommended: true
     },
     {
         title: "All About Love",
@@ -112,9 +96,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true,
-        pageLength: 272,
-        genres: ["Non-Fiction", "Essay"]
+        isRecommended: true
     },
     {
         title: "Children of Blood and Bone",
@@ -125,9 +107,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true,
-        pageLength: 531,
-        genres: ["Fiction", "Fantasy"]
+        isRecommended: true
     },
     {
         title: "Children of Virtue and Vengence ",
@@ -138,9 +118,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true,
-        pageLength: 416,
-        genres: ["Fiction", "Fantasy"]
+        isRecommended: true
     },
     {
         title: "Get a life Chloe Brown",
@@ -151,9 +129,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true,
-        pageLength: 384,
-        genres: ["Fiction", "Romance"]
+        isRecommended: true
     },
     {
         title: "Take a Hint Dani Brown",
@@ -164,9 +140,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true,
-        pageLength: 400,
-        genres: ["Fiction", "Romance"]
+        isRecommended: true
     },
     {
         title: "Act Your Age Eve Brown",
@@ -177,9 +151,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true,
-        pageLength: 393,
-        genres: ["Fiction", "Romance"]
+        isRecommended: true
     },
     {
         title: "Circe",
@@ -190,9 +162,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true,
-        pageLength: 416,
-        genres: ["Fiction", "Historical"]
+        isRecommended: true
     },
     {
         title: "Fourth Wing",
@@ -203,9 +173,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true,
-        pageLength: 528,
-        genres: ["Fiction", "Fantasy"]
+        isRecommended: true
     },
     {
         title: "Pride and Prejudice",
@@ -216,9 +184,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true,
-        pageLength: 496,
-        genres: ["Fiction", "Classics", "Romance"]
+        isRecommended: true
     },
     {
         title: "Sense and Sensibility",
@@ -229,9 +195,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true,
-        pageLength: 360,
-        genres: ["Fiction", "Classics", "Romance"]
+        isRecommended: true
     },
     {
         title: "Six of Crows",
@@ -242,9 +206,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true,
-        pageLength: 374,
-        genres: ["Fiction", "Fantasy"]
+        isRecommended: true
     },
     {
         title: "Crooked Kingdom",
@@ -255,9 +217,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true,
-        pageLength: 546,
-        genres: ["Fiction", "Fantasy"]
+        isRecommended: true
     },
     {
         title: "The No Show",
@@ -268,9 +228,7 @@ const BookList = [
         isCurrentlyReading: false, 
         isTBR: false,
         isAlreadyRead: true,
-        isRecommended: true,
-        pageLength: 352,
-        genres: ["Fiction", "Romance"]
+        isRecommended: true
     },
     
   ];
