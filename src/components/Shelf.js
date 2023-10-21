@@ -3,6 +3,7 @@ import {Box, Typography, Button, Modal} from '@mui/material';
 import Book from '../components/Book'
 import AddBookModal from '../components/AddBookModal'
 import '../styles/Shelf.css'
+import BookList from "../data/BookList";
 
 const modalStyle = {
     position: 'absolute',
@@ -34,13 +35,13 @@ const Shelf = (props) => {
 
     useEffect(() => {
         if(props.type === "isCurrentlyReading") {
-            setShelfBookList(props.bookList.filter((b) => b.isCurrentlyReading === true))
+            setShelfBookList(BookList.filter((b) => b.isCurrentlyReading === true))
         }
         else if(props.type === "isTBR") {
-            setShelfBookList(props.bookList.filter((b) => b.isTBR === true))
+            setShelfBookList(BookList.filter((b) => b.isTBR === true))
         }
         else if(props.type === "isAlreadyRead") {
-            setShelfBookList(props.bookList.filter((b) => b.isAlreadyRead === true))
+            setShelfBookList(BookList.filter((b) => b.isAlreadyRead === true))
         }
       }, [props]);
 
@@ -60,6 +61,17 @@ const Shelf = (props) => {
                     ))
                 }
 
+                {/* <Book book={BookList[0]}></Book>
+                <Book book={BookList[1]}></Book>
+                <Book book={BookList[2]}></Book>
+                <Book book={BookList[3]}></Book>
+                <Book book={BookList[4]}></Book>
+                <Book book={BookList[5]}></Book>
+                <Book book={BookList[6]}></Book>
+                <Book book={BookList[7]}></Book>
+                <Book book={BookList[0]}></Book>
+                <Book book={BookList[1]}></Book> */}
+
             </div>
             <Button className="add-button" variant="contained" sx={{"color": "#F9F7F4", "backgroundColor": "#75420e"}} onClick={handleAddPress}>+</Button>
             <Modal 
@@ -69,7 +81,7 @@ const Shelf = (props) => {
                 aria-describedby="modal-modal-description"
                 sx={{overflow:"auto"}}
             >
-            <AddBookModal shelfType={props.type} shelfTitle={props.shelfTitle} shelfBookList={shelfBookList} bookList={props.bookList} setBookList={props.setBookList}/>
+            <AddBookModal shelfType={props.type} shelfTitle={props.shelfTitle} shelfBookList={shelfBookList}/>
         </Modal>
         </div>
     </div>
