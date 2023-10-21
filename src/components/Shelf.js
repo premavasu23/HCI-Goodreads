@@ -39,7 +39,7 @@ const Shelf = (props) => {
 
                 {
                     props.content.map((b) => (
-                        <Book book={b}></Book>
+                        <Book book={b} shelfType={props.type}></Book>
                     ))
                 }
 
