@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Box, Typography, IconButton, Modal, TextField} from '@mui/material';
+import { Box, Typography, IconButton, Modal, TextField } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import BookHorizontal from './BookHorizontal'
 import BookList from "../data/BookList";
@@ -14,16 +14,16 @@ const boxStyle = {
     bgcolor: 'background.paper',
     boxShadow: 24,
     p: 4,
-    display: 'column', 
+    display: 'column',
     overflow: "auto",
     borderRadius: '1vh',
 };
-  
+
 
 const AddBookModal = (props) => {
 
     const [searchValue, setSearchValue] = useState("");
-    const [showSearchResults, setShowSearchResults] = useState(false); 
+    const [showSearchResults, setShowSearchResults] = useState(false);
     const [shelfBookList, setShelfBookList] = useState([]);
     const [searchResults, setSearchResults] = useState([]);
 
@@ -42,36 +42,36 @@ const AddBookModal = (props) => {
     }
 
     useEffect(() => {
-        if(props.shelfType === "isCurrentlyReading") {
+        if (props.shelfType === "isCurrentlyReading") {
             setShelfBookList(BookList.filter((b) => b.isCurrentlyReading === false))
         }
-        else if(props.shelfType === "isTBR") {
+        else if (props.shelfType === "isTBR") {
             setShelfBookList(BookList.filter((b) => b.isTBR === false))
         }
-        else if(props.shelfType === "isAlreadyRead") {
+        else if (props.shelfType === "isAlreadyRead") {
             setShelfBookList(BookList.filter((b) => b.isAlreadyRead === false))
         }
-      }, [props]);
+    }, [props]);
 
     return (
         <Box sx={boxStyle}>
-            <Box sx={{display: "row"}}>
-                <TextField id="outlined-basic" label="Search" variant="outlined" size="small" sx={{width: "28vw"}} onChange={handleSearchValue}/>
+            <Box sx={{ display: "row" }}>
+                <TextField id="outlined-basic" label="Search" variant="outlined" size="small" sx={{ width: "28vw" }} onChange={handleSearchValue} />
                 <IconButton aria-label="delete" color="primary" onClick={handleSearchClick}>
-                <SearchIcon />
+                    <SearchIcon />
                 </IconButton>
             </Box>
             {(showSearchResults === false || searchValue.length === 0) && (
-                    shelfBookList.map((b) => (
-                        <BookHorizontal book={b} shelfType={props.shelfType}></BookHorizontal>
-                    )))
-                    }
+                shelfBookList.map((b) => (
+                    <BookHorizontal book={b} shelfType={props.shelfType}></BookHorizontal>
+                )))
+            }
             {(showSearchResults === true) && (
-                    searchResults.map((b) => (
-                        <BookHorizontal book={b} shelfType={props.shelfType}></BookHorizontal>
-                    )))
-                    }
-            
+                searchResults.map((b) => (
+                    <BookHorizontal book={b} shelfType={props.shelfType}></BookHorizontal>
+                )))
+            }
+
         </Box>
     );
 };
