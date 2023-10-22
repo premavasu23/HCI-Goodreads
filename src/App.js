@@ -4,15 +4,36 @@ import Navbar from './components/Navbar';
 import Stats from './components/Stats'
 import Challenge from './components/Challenge'
 import Recommendations from './components/Recommendations'
+import React, { useState, useEffect } from 'react';
 
 function App() {
+
+  const [bookList, setBookList] = useState(require('./data/BookList.json'))
+  const [isCurrentlyReadingList, setIsCurrentlyReadingList] = useState([])
+  const [isTBRList, setIsTBRList] = useState([])
+  const [isAlreadyReadList, setIsAlreadyReadList] = useState([])
+  const [isRecommended, setIsRecommended] = useState([])
+
+  useEffect(() => {
+
+    setIsCurrentlyReadingList(bookList.filter((b) => b.isCurrentlyReading === true))
+    setIsTBRList(bookList.filter((b) => b.isTBR === true))
+    setIsAlreadyReadList(bookList.filter((b) => b.isAlreadyRead === true))
+    setIsRecommended(bookList.filter((b) => b.isRecommended === true))
+
+    console.log("It's happening!!")
+
+
+  }, [bookList]);
+
+
   return (
     <div className>
       <Navbar />
       <div className="Shelves">
-        <Shelf type="isCurrentlyReading" shelfTitle="Currently Reading"></Shelf>
-        <Shelf type="isTBR" shelfTitle="TBR"></Shelf>
-        <Shelf type="isAlreadyRead" shelfTitle="Already Read"></Shelf>
+        <Shelf type="isCurrentlyReading" shelfTitle="Currently Reading" bookList={bookList} setBookList={setBookList}></Shelf>
+        <Shelf type="isTBR" shelfTitle="TBR" bookList={bookList} setBookList={setBookList}></Shelf>
+        <Shelf type="isAlreadyRead" shelfTitle="Already Read" bookList={bookList} setBookList={setBookList}></Shelf>
       </div>
       <div className = "right-side">
         <Challenge></Challenge>
