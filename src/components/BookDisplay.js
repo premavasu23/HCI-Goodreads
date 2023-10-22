@@ -76,7 +76,7 @@ const BookDisplay = (props) => {
                     padding: "1vh"
                 }}>
                     <Stack direction="row" spacing={2} justifyContent="space-between">
-                        <img className="book-cover-horizontal" src={props.book.cover}></img>
+                        <img className="book-cover-horizontal" src={require('../images/' + props.book.cover)}></img>
                         <Stack direction="column" spacing={1} justifyContent="space-evenly" alignItems="center">
                             <div className="title-horizontal">{props.book.title}</div>
                             <div className="author-horizontal">{"by " + props.book.author}</div>
@@ -112,7 +112,7 @@ const BookDisplay = (props) => {
                     padding: "1vh"
                 }}>
                     <Stack direction="row" spacing={2} justifyContent="space-between">
-                        <img className="book-cover-horizontal" src={props.book.cover}></img>
+                        <img className="book-cover-horizontal" src={require('../images/' + props.book.cover)}></img>
                         <Stack direction="column" spacing={1} justifyContent="space-evenly" alignItems="center">
                             <div className="title-horizontal">{props.book.title}</div>
                             <div className="author-horizontal">{"by " + props.book.author}</div>

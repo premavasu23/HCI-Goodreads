@@ -57,20 +57,9 @@ const Shelf = (props) => {
 
                 {
                     shelfBookList.map((b) => (
-                        <Book book={b} shelfType={props.type}></Book>
+                        <Book book={b} shelfType={props.type} bookList={props.bookList} setBookList={props.shelfBookList}></Book>
                     ))
                 }
-
-                {/* <Book book={BookList[0]}></Book>
-                <Book book={BookList[1]}></Book>
-                <Book book={BookList[2]}></Book>
-                <Book book={BookList[3]}></Book>
-                <Book book={BookList[4]}></Book>
-                <Book book={BookList[5]}></Book>
-                <Book book={BookList[6]}></Book>
-                <Book book={BookList[7]}></Book>
-                <Book book={BookList[0]}></Book>
-                <Book book={BookList[1]}></Book> */}
 
             </div>
             <Button className="add-button" variant="contained" sx={{"color": "#F9F7F4", "backgroundColor": "#75420e"}} onClick={handleAddPress}>+</Button>
@@ -81,7 +70,7 @@ const Shelf = (props) => {
                 aria-describedby="modal-modal-description"
                 sx={{overflow:"auto"}}
             >
-            <AddBookModal shelfType={props.type} shelfTitle={props.shelfTitle} shelfBookList={shelfBookList}/>
+            <AddBookModal shelfType={props.type} shelfTitle={props.shelfTitle} shelfBookList={props.shelfBookList}/>
         </Modal>
         </div>
     </div>

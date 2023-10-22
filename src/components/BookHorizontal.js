@@ -1,17 +1,41 @@
 import React from "react";
 import { Paper, Button, Stack, Box } from '@mui/material';
 import '../styles/BookHorizontal.css'
-import BookList from "../data/BookList";
 import Rating from '@mui/material/Rating';
 
 const BookHorizontal = (props) => {
 
     const handleAddClick = (e) => {
-        // put add book logic here
-        const ind = BookList.indexOf(props.book);
-        console.log(BookList[ind]);
-        BookList[ind][props.shelfType] = true;
-        console.log(BookList[ind]);
+        const ind = props.bookList.indexOf(props.book);
+            
+        let newBookList = [...props.bookList];
+
+        if (props.shelfType === 'isCurrentlyReading') {
+            newBookList[ind].isCurrentlyReading = true;
+            newBookList[ind].isTBR = false;
+            newBookList[ind].isAlreadyRead = false;
+            newBookList[ind].isRecommended = false;
+        }
+        else if (props.shelfType === 'isTBR') {
+            newBookList[ind].isCurrentlyReading = false;
+            newBookList[ind].isTBR = true;
+            newBookList[ind].isAlreadyRead = false;
+            newBookList[ind].isRecommended = false;
+        }
+        else if (props.shelfType === 'isAlreadyRead') {
+            newBookList[ind].isCurrentlyReading = false;
+            newBookList[ind].isTBR = false;
+            newBookList[ind].isAlreadyRead = true;
+            newBookList[ind].isRecommended = false;
+        }
+        else if (props.shelfType === 'isRecommended') {
+            newBookList[ind].isCurrentlyReading = false;
+            newBookList[ind].isTBR = false;
+            newBookList[ind].isAlreadyRead = false;
+            newBookList[ind].isRecommended = true;
+        }
+
+        props.setBookList(newBookList)
 
     }
     return (
@@ -25,7 +49,7 @@ const BookHorizontal = (props) => {
                     padding: "1vh"
                 }}>
                 <Stack direction="row" spacing={2} justifyContent="space-between">
-                    <img className="book-cover-horizontal" src={props.book.cover}></img>
+                    <img className="book-cover-horizontal" src={require('../images/' + props.book.cover)}></img>
                     <Stack direction="column" spacing={1} justifyContent="space-evenly" alignItems="center">
                         <div className="title-horizontal">{props.book.title}</div>
                         <div className="author-horizontal">{"by " + props.book.author}</div>

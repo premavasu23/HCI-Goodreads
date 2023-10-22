@@ -46,7 +46,7 @@ const Book = (props) => {
                             alignContent: "space-between",
                             margin: "2vw",
                         }}>
-                        <img className="book-cover" src={props.book.cover}></img>
+                        <img className="book-cover" src={require('../images/' + props.book.cover)}></img>
                         <div className="title">{props.book.title}</div>
                         <div className="author">{"by " + props.book.author}</div>
                         <div className="below-book-content">
@@ -59,9 +59,10 @@ const Book = (props) => {
                                         backgroundColor: "#F9F7F4",
                                     }}
                                 >
-                                    <Rating name="read-only" defaultValue={props.book.personalRating} precision={0.5} size="small" readOnly sx={{
+                                    <Rating name="read-only" defaultValue={4.5} precision={0.5} size="small" readOnly sx={{
                                         backgroundColor: "#F9F7F4", marginRight: "0.3rem"
                                     }} />
+                                    
                                     <Box sx={{ alignContent: "center" }}>{labels[props.book.personalRating]}</Box>
                                 </Box>
 
@@ -92,7 +93,7 @@ const Book = (props) => {
                 aria-describedby="modal-modal-description"
                 sx={{ overflow: "auto" }}
             >
-                <BookDisplay book={props.book} shelfType={props.shelfType} />
+                <BookDisplay book={props.book} shelfType={props.shelfType} bookList={props.booklist} setBookList={props.setBookList} />
             </Modal>
 
         </div>
