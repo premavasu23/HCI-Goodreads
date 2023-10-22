@@ -12,23 +12,30 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import Modal from '@mui/material/MenuItem';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import '../styles/Navbar.css';
 import BookList from "../data/BookList";
+import BookHorizontal from './BookHorizontal'
 
 
 const pages = ['Home', 'My Books', 'Community'];
 const settings = ['Profile', 'Account', 'Logout'];
 
-function Navbar() {
+function Navbar(props) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElResults, setAnchorElResults] = React.useState(null);
   const [searchValue, setSearchValue] = React.useState("");
   const [showSearchResults, setShowSearchResults] = React.useState(false); 
-  const [shelfBookList, setShelfBookList] = React.useState([]);
+  const [openModal, setOpenModal] = React.useState(false); 
   const [searchResults, setSearchResults] = React.useState([]);
+
+    const handleClose = () => setAnchorElResults(null);
+    ;
+
 
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
@@ -44,6 +51,7 @@ function Navbar() {
 }
 
   const handleSearchClick = (e) => {
+    setAnchorElResults(e.currentTarget);
     setShowSearchResults(true);
     setSearchResults(BookList.filter((b) => (b.title.toLowerCase().includes(searchValue.toLowerCase()) || b.author.toLowerCase().includes(searchValue.toLowerCase()))));
     //console.log(BookList);
@@ -96,7 +104,6 @@ function Navbar() {
               ))}
             </Menu>
           </Box>
-          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
@@ -137,12 +144,36 @@ function Navbar() {
                 <SearchIcon/>
           </IconButton>
           <Box sx={{ flexGrow: 0 }}>
+            <Menu
+              sx={{ mt: '45px', overflow: "auto"}}
+              anchorEl={anchorElResults}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElResults)}
+              onClose={handleClose}
+            >
+              {(searchResults.map((b) => (
+                <BookHorizontal book={b} shelfType={"isTBR"} bookList={props.bookList} setBookList={props.setBookList}></BookHorizontal>
+                    )))
+                    }
+            </Menu>
+            </Box>
+
+            {/*IGNORE BELOW THIS */}
+          <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
-            <Menu
+          <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -164,11 +195,10 @@ function Navbar() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+            </Box>
         </Toolbar>
       </Container>
     </AppBar>
-      {showSearchResults === true && <Box sx={{backgroundColor:"orange"}}>HELLO</Box>}
     </div>
   );
 }

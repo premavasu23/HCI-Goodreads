@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className>
-      <Navbar />
+      <Navbar bookList={bookList} setBookList={setBookList}/>
       <div className="Shelves">
         <Shelf type="isCurrentlyReading" shelfTitle="Currently Reading" bookList={bookList} setBookList={setBookList}></Shelf>
         <Shelf type="isTBR" shelfTitle="TBR" bookList={bookList} setBookList={setBookList}></Shelf>
