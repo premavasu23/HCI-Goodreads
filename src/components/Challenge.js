@@ -4,8 +4,8 @@ import BookList from '../data/BookList';
 import ProgressBar from './Progress';
 
 const Challenge = () => {
-  const [goal, setGoal] = useState(0);
-  const [progress, setProgress] = useState(0);
+  const [goal, setGoal] = useState(20);
+  const [progress, setProgress] = useState(5);
 
   const handleSetGoal = (newGoal) => {
     setGoal(newGoal);
