@@ -47,15 +47,13 @@ function Navbar(props) {
 
   const handleSearchValue = (e) => {
     setSearchValue(e.target.value);
-    console.log(searchValue);
 }
 
   const handleSearchClick = (e) => {
     setAnchorElResults(e.currentTarget);
     setShowSearchResults(true);
     setSearchResults(BookList.filter((b) => (b.title.toLowerCase().includes(searchValue.toLowerCase()) || b.author.toLowerCase().includes(searchValue.toLowerCase()))));
-    //console.log(BookList);
-    console.log(searchResults);
+
 
 }
 

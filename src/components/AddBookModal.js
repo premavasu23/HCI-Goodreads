@@ -29,8 +29,6 @@ const AddBookModal = (props) => {
 
     const handleSearchValue = (e) => {
         setSearchValue(e.target.value);
-        console.log(searchValue.length);
-
     }
 
     const handleSearchClick = (e) => {

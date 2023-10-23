@@ -56,7 +56,7 @@ const Shelf = (props) => {
 
                 {
                     shelfBookList.map((b) => (
-                        <Book book={b} shelfType={props.type}></Book>
+                        <Book book={b} shelfType={props.type} bookList={props.bookList} setBookList={props.setBookList}></Book>
                     ))
                 }
 

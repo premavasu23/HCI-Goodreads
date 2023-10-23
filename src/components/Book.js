@@ -47,7 +47,7 @@ const Book = (props) => {
                 aria-describedby="modal-modal-description"
                 sx={{overflow:"auto"}}
             >
-                <BookDisplay book={props.book} shelfType={props.shelfType}/>
+                <BookDisplay book={props.book} shelfType={props.shelfType} bookList={props.bookList} setBookList={props.setBookList}/>
         </Modal>
 
         </div>
