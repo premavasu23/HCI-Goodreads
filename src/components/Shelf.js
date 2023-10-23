@@ -3,6 +3,7 @@ import {Box, Typography, Button, Modal} from '@mui/material';
 import Book from '../components/Book'
 import AddBookModal from '../components/AddBookModal'
 import '../styles/Shelf.css'
+import BookList from "../data/BookList";
 
 const modalStyle = {
     position: 'absolute',
@@ -34,13 +35,13 @@ const Shelf = (props) => {
 
     useEffect(() => {
         if(props.type === "isCurrentlyReading") {
-            setShelfBookList(props.bookList.filter((b) => b.isCurrentlyReading === true))
+            setShelfBookList(BookList.filter((b) => b.isCurrentlyReading === true))
         }
         else if(props.type === "isTBR") {
-            setShelfBookList(props.bookList.filter((b) => b.isTBR === true))
+            setShelfBookList(BookList.filter((b) => b.isTBR === true))
         }
         else if(props.type === "isAlreadyRead") {
-            setShelfBookList(props.bookList.filter((b) => b.isAlreadyRead === true))
+            setShelfBookList(BookList.filter((b) => b.isAlreadyRead === true))
         }
       }, [props]);
 
@@ -69,7 +70,7 @@ const Shelf = (props) => {
                 aria-describedby="modal-modal-description"
                 sx={{overflow:"auto"}}
             >
-            <AddBookModal shelfType={props.type} shelfTitle={props.shelfTitle} shelfBookList={shelfBookList} bookList={props.bookList} setBookList={props.setBookList}/>
+            <AddBookModal shelfType={props.type} shelfTitle={props.shelfTitle} shelfBookList={props.shelfBookList} bookList={props.bookList} setBookList={props.setBookList}/>
         </Modal>
         </div>
     </div>

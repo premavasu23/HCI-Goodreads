@@ -1,4 +1,5 @@
 // import React, { useState, useEffect } from 'react';
+import BookList from '../data/BookList';
 import '../styles/Stats.css'
 import BookList from '../data/BookList'
 const Stats = (props) => {
@@ -23,7 +24,6 @@ const Stats = (props) => {
 //     const sciFiBooks = BookList.filter(book => book.genres.includes("Science-Fiction") && book.isAlreadyRead);
 //     const fantasyBooks = BookList.filter(book => book.genres.includes("Fantasy") && book.isAlreadyRead);
 //     const historicalBooks = BookList.filter(book => book.genres.includes("Historical") && book.isAlreadyRead);
-
       
     return (
         <div className="stats">
@@ -31,16 +31,16 @@ const Stats = (props) => {
 
             {/* <div className='genre'>        
                 <h4>Genre Breakdown</h4>
-                <div>{"Non-Fiction: " + nonFictionBooks.length}</div><br/>
+                {/* <div>{"Non-Fiction: " + nonFictionBooks.length}</div><br/>
                 <div>{"Fiction: " + fictionBooks.length}</div><br/>
                 <div>{"Classics: " + classicBooks.length}</div><br/>
                 <div>{"Romance:" + romanceBooks.length}</div><br/>
                 <div>{"Historical: " + historicalBooks.length}</div><br/>
                 <div>{"Fantasy: " + fantasyBooks.length}</div><br/>
                 <div>{"Dystopian: " + dystopianBooks.length}</div><br/>
-                <div>{"Science Fiction: " + sciFiBooks.length}</div>
+                <div>{"Science Fiction: " + sciFiBooks.length}</div> */}
               
-            </div> */}
+            </div>
             <div className='book-length'>        
                 <h4>Avg Book Length</h4>
                 <div>{"1 - 100 pages: " +  bookslessThan100.length}</div><br/>
