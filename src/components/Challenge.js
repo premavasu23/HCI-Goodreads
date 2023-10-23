@@ -26,7 +26,7 @@ const Challenge = () => {
                     placeholder="Set Your Annual Reading Goal"
                     onChange={(e) => handleSetGoal(e.target.value)}
                 />
-                <button onClick={handleAddProgress}>Add One Book</button>  
+                <button onClick={handleAddProgress}>+</button>  
                 {/* need to make this add book  */}
             </div>
         </div>
