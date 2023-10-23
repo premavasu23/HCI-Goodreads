@@ -24,7 +24,6 @@ const Stats = (props) => {
 //     const historicalBooks = BookList.filter(book => book.genres.includes("Historical") && book.isAlreadyRead);
       
     return (
-        <div>
         <div className="stats">
             <h2>Reading Stats</h2>
 
@@ -39,7 +38,7 @@ const Stats = (props) => {
                 <div>{"Dystopian: " + dystopianBooks.length}</div><br/>
                 <div>{"Science Fiction: " + sciFiBooks.length}</div> */}
               
-            </div>
+            {/* </div> */}
             <div className='book-length'>        
                 <h4>Avg Book Length</h4>
                 <div>{"1 - 100 pages: " +  bookslessThan100.length}</div><br/>
