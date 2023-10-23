@@ -1,11 +1,10 @@
 .challenge{
-    width: 25vw;
-    height: 5vw;
-    margin-top: 0.25vw;
-    margin-bottom: 1vw;
-    margin-left: 2vw;
+    width: 29vw;
+    height: 8.5vw;
+    /* margin-left: 2vw; */
     padding: 1vw;
     display: flex;
+    border-radius: 0.25vw;
     flex-direction: column;
     border-radius: 0.25vw;
     border-width: 1px;
@@ -13,39 +12,21 @@
     border-style: solid;
     border-color: #75420e;
     color: 	#553b08;
-
+    overflow-y: scroll;
 }
-
 .progress-bar {
     width: 100%;
-    height: 30px;
+    height: 20px;
     background-color: #ccc;
-    position: relative;
-    margin-top: 10px;
+    margin-bottom: 5px;
   }
   
-  .progress {
+.progress {
     height: 100%;
     background-color: #007bff;
-    transition: width 0.3s ease-in-out;
-  }
+}
   
-/* .progress-bar {
-    width: 100%;
-    height: 30px;
-    background-color: #ccc;
-    position: relative;
-    margin-bottom: 10px;
-  }
-  
-  .progress {
-    height: 100%;
-    background-color: #007bff;
-    transition: width 0.3s ease-in-out;
-  }
-  
-  input[type="number"] {
-    width: 60px;
-    margin-right: 10px;
-  } */
+.current-progress{
+    font-size: small;
+}
   

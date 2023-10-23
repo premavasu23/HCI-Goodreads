@@ -20,16 +20,12 @@ function App() {
     setIsTBRList(bookList.filter((b) => b.isTBR === true))
     setIsAlreadyReadList(bookList.filter((b) => b.isAlreadyRead === true))
     setIsRecommended(bookList.filter((b) => b.isRecommended === true))
-
-    console.log("It's happening!!")
-
-
   }, [bookList]);
 
 
   return (
     <div className>
-      <Navbar />
+      <Navbar bookList={bookList} setBookList={setBookList}/>
       <div className="Shelves">
         <Shelf type="isCurrentlyReading" shelfTitle="Currently Reading" bookList={bookList} setBookList={setBookList}></Shelf>
         <Shelf type="isTBR" shelfTitle="TBR" bookList={bookList} setBookList={setBookList}></Shelf>
@@ -37,8 +33,8 @@ function App() {
       </div>
       <div className = "right-side">
         <Challenge></Challenge>
-        <Stats></Stats>
-        <Recommendations type="isRecommended" shelfTitle="Recommendations"></Recommendations>
+        <Stats bookList={bookList}></Stats>
+        <Recommendations type="isRecommended" shelfTitle="Recommendations" bookList={bookList} setBookList={setBookList}></Recommendations>
       </div>
     </div>
     

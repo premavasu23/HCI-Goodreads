@@ -1,33 +1,35 @@
 // import React, { useState, useEffect } from 'react';
 import BookList from '../data/BookList';
 import '../styles/Stats.css'
+import BookList from '../data/BookList'
+const Stats = (props) => {
 
-const Stats = () => {
     //book length conditionals 
-    const bookslessThan100 = BookList.filter(book => book.pageLength > 0 && book.pageLength <= 100 && (book.isCurrentlyReading === true || book.isAlreadyRead ===true));
-    const booksLessThan200 = BookList.filter(book => book.pageLength > 100 && book.pageLength <= 200 && (book.isCurrentlyReading === true || book.isAlreadyRead ===true));
-    const booksLessThan300 = BookList.filter(book => book.pageLength > 200 && book.pageLength <= 300 && (book.isCurrentlyReading === true || book.isAlreadyRead ===true));
-    const booksLessThan400 = BookList.filter(book => book.pageLength > 300 && book.pageLength <= 400 && (book.isCurrentlyReading === true || book.isAlreadyRead ===true));
-    const booksLessThan500 = BookList.filter(book => book.pageLength > 400 && book.pageLength <= 500 && (book.isCurrentlyReading === true || book.isAlreadyRead ===true));
-    const booksLessThan600 = BookList.filter(book => book.pageLength > 500 && book.pageLength <= 600 && (book.isCurrentlyReading === true || book.isAlreadyRead ===true));
-    const booksGreaterThan600 = BookList.filter(book => book.pageLength > 600 && (book.isCurrentlyReading === true || book.isAlreadyRead ===true));
+
+    const bookslessThan100 = BookList.filter(book => book.pageLength > 0 && book.pageLength <= 100 && book.isAlreadyRead);
+    const booksLessThan200 = BookList.filter(book => book.pageLength > 100 && book.pageLength <= 200 && book.isAlreadyRead);
+    const booksLessThan300 = BookList.filter(book => book.pageLength > 200 && book.pageLength <= 300 && book.isAlreadyRead);
+    const booksLessThan400 = BookList.filter(book => book.pageLength > 300 && book.pageLength <= 400 && book.isAlreadyRead);
+    const booksLessThan500 = BookList.filter(book => book.pageLength > 400 && book.pageLength <= 500 && book.isAlreadyRead);
+    const booksLessThan600 = BookList.filter(book => book.pageLength > 500 && book.pageLength <= 600 && book.isAlreadyRead);
+    const booksGreaterThan600 = BookList.filter(book => book.pageLength > 600 && book.isAlreadyRead);
    
     //genre breakdown
-    // const fictionBooks = BookList.filter(book => book.genres.includes("Fiction") && (book.isCurrentlyReading === true || book.isAlreadyRead ===true));
-    // const nonFictionBooks = BookList.filter(book => book.genres.includes("Non-Fiction") && (book.isCurrentlyReading === true || book.isAlreadyRead ===true));
-    // const essayBooks = BookList.filter(book => book.genres.includes("Fantasy") && (book.isCurrentlyReading === true || book.isAlreadyRead ===true));
-    // const classicBooks = BookList.filter(book => book.genres.includes("Fantasy") && (book.isCurrentlyReading === true || book.isAlreadyRead ===true));
-    // const romanceBooks = BookList.filter(book => book.genres.includes("Fantasy") && (book.isCurrentlyReading === true || book.isAlreadyRead ===true));
-    // const dystopianBooks = BookList.filter(book => book.genres.includes("Dystopian") && (book.isCurrentlyReading === true || book.isAlreadyRead ===true));
-    // const sciFiBooks = BookList.filter(book => book.genres.includes("Science-Fiction") && (book.isCurrentlyReading === true || book.isAlreadyRead ===true));
-    // const fantasyBooks = BookList.filter(book => book.genres.includes("Fantasy") && (book.isCurrentlyReading === true || book.isAlreadyRead ===true));
-    // const historicalBooks = BookList.filter(book => book.genres.includes("Historical") && (book.isCurrentlyReading === true || book.isAlreadyRead ===true));
-
+    // const fictionBooks = BookList.filter(book => book.genres.includes("Fiction") && book.isAlreadyRead);
+//     const nonFictionBooks = BookList.filter(book => book.genres.includes("Non-Fiction") && book.isAlreadyRead);
+//     const essayBooks = BookList.filter(book => book.genres.includes("Fantasy") && book.isAlreadyRead);
+//     const classicBooks = BookList.filter(book => book.genres.includes("Fantasy") && book.isAlreadyRead);
+//     const romanceBooks = BookList.filter(book => book.genres.includes("Fantasy") && book.isAlreadyRead);
+//     const dystopianBooks = BookList.filter(book => book.genres.includes("Dystopian") && book.isAlreadyRead);
+//     const sciFiBooks = BookList.filter(book => book.genres.includes("Science-Fiction") && book.isAlreadyRead);
+//     const fantasyBooks = BookList.filter(book => book.genres.includes("Fantasy") && book.isAlreadyRead);
+//     const historicalBooks = BookList.filter(book => book.genres.includes("Historical") && book.isAlreadyRead);
       
     return (
         <div className="stats">
             <h2>Reading Stats</h2>
-            <div className='genre'>        
+
+            {/* <div className='genre'>        
                 <h4>Genre Breakdown</h4>
                 {/* <div>{"Non-Fiction: " + nonFictionBooks.length}</div><br/>
                 <div>{"Fiction: " + fictionBooks.length}</div><br/>

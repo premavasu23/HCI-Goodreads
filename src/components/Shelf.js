@@ -62,7 +62,7 @@ const Shelf = (props) => {
                 }
 
             </div>
-            <Button className="add-button" variant="contained" sx={{"color": "#F9F7F4", "backgroundColor": "#75420e"}} onClick={handleAddPress}>+</Button>
+            <Button className="add-button" variant="contained" sx={{"color": "#F9F7F4", "backgroundColor": "#75420e", "&:hover": {backgroundColor: '#553b08', color: 'white'}}} onClick={handleAddPress}>+</Button>
             <Modal 
                 open={openAddBooksModal}
                 onClose={handleClose}

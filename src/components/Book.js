@@ -106,6 +106,7 @@ const Book = (props) => {
                 <BookDisplay book={props.book} shelfType={props.shelfType} bookList={props.bookList} setBookList={props.setBookList} value={value} setValue={setValue}/>
             </Modal>
 
+
         </div>
 
     );
