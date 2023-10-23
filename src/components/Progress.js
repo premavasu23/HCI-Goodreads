@@ -12,7 +12,7 @@ function Progress({ goal, progress }) {
           style={{ width: `${percentage}%` }}
         />
       </div>
-      <p>
+      <p className='current-progress'>
         Progress: {progress} / {goal} books (
         {goal === 0 ? 0 : ((progress / goal) * 100).toFixed(2)}%)
       </p>

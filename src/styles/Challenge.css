@@ -25,5 +25,7 @@
     background-color: #007bff;
   }
   
-  /* Add more CSS for your components as needed */
+  .current-progress{
+    font-size: small;
+  }
   
