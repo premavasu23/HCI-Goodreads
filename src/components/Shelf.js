@@ -3,7 +3,6 @@ import {Box, Typography, Button, Modal} from '@mui/material';
 import Book from '../components/Book'
 import AddBookModal from '../components/AddBookModal'
 import '../styles/Shelf.css'
-import BookList from "../data/BookList";
 
 const modalStyle = {
     position: 'absolute',
@@ -35,13 +34,13 @@ const Shelf = (props) => {
 
     useEffect(() => {
         if(props.type === "isCurrentlyReading") {
-            setShelfBookList(BookList.filter((b) => b.isCurrentlyReading === true))
+            setShelfBookList(props.bookList.filter((b) => b.isCurrentlyReading === true))
         }
         else if(props.type === "isTBR") {
-            setShelfBookList(BookList.filter((b) => b.isTBR === true))
+            setShelfBookList(props.bookList.filter((b) => b.isTBR === true))
         }
         else if(props.type === "isAlreadyRead") {
-            setShelfBookList(BookList.filter((b) => b.isAlreadyRead === true))
+            setShelfBookList(props.bookList.filter((b) => b.isAlreadyRead === true))
         }
       }, [props]);
 

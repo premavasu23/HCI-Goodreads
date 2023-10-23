@@ -17,7 +17,6 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import '../styles/Navbar.css';
-import BookList from "../data/BookList";
 import BookHorizontal from './BookHorizontal'
 
 
@@ -52,7 +51,7 @@ function Navbar(props) {
   const handleSearchClick = (e) => {
     setAnchorElResults(e.currentTarget);
     setShowSearchResults(true);
-    setSearchResults(BookList.filter((b) => (b.title.toLowerCase().includes(searchValue.toLowerCase()) || b.author.toLowerCase().includes(searchValue.toLowerCase()))));
+    setSearchResults(props.bookList.filter((b) => (b.title.toLowerCase().includes(searchValue.toLowerCase()) || b.author.toLowerCase().includes(searchValue.toLowerCase()))));
 
 
 }

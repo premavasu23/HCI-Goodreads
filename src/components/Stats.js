@@ -1,18 +1,16 @@
 // import React, { useState, useEffect } from 'react';
-import BookList from '../data/BookList';
 import '../styles/Stats.css'
-import BookList from '../data/BookList'
 const Stats = (props) => {
 
     //book length conditionals 
 
-    const bookslessThan100 = BookList.filter(book => book.pageLength > 0 && book.pageLength <= 100 && book.isAlreadyRead);
-    const booksLessThan200 = BookList.filter(book => book.pageLength > 100 && book.pageLength <= 200 && book.isAlreadyRead);
-    const booksLessThan300 = BookList.filter(book => book.pageLength > 200 && book.pageLength <= 300 && book.isAlreadyRead);
-    const booksLessThan400 = BookList.filter(book => book.pageLength > 300 && book.pageLength <= 400 && book.isAlreadyRead);
-    const booksLessThan500 = BookList.filter(book => book.pageLength > 400 && book.pageLength <= 500 && book.isAlreadyRead);
-    const booksLessThan600 = BookList.filter(book => book.pageLength > 500 && book.pageLength <= 600 && book.isAlreadyRead);
-    const booksGreaterThan600 = BookList.filter(book => book.pageLength > 600 && book.isAlreadyRead);
+    const bookslessThan100 = props.bookList.filter(book => book.pageLength > 0 && book.pageLength <= 100 && book.isAlreadyRead);
+    const booksLessThan200 = props.bookList.filter(book => book.pageLength > 100 && book.pageLength <= 200 && book.isAlreadyRead);
+    const booksLessThan300 = props.bookList.filter(book => book.pageLength > 200 && book.pageLength <= 300 && book.isAlreadyRead);
+    const booksLessThan400 = props.bookList.filter(book => book.pageLength > 300 && book.pageLength <= 400 && book.isAlreadyRead);
+    const booksLessThan500 = props.bookList.filter(book => book.pageLength > 400 && book.pageLength <= 500 && book.isAlreadyRead);
+    const booksLessThan600 = props.bookList.filter(book => book.pageLength > 500 && book.pageLength <= 600 && book.isAlreadyRead);
+    const booksGreaterThan600 = props.bookList.filter(book => book.pageLength > 600 && book.isAlreadyRead);
    
     //genre breakdown
     // const fictionBooks = BookList.filter(book => book.genres.includes("Fiction") && book.isAlreadyRead);
@@ -26,6 +24,7 @@ const Stats = (props) => {
 //     const historicalBooks = BookList.filter(book => book.genres.includes("Historical") && book.isAlreadyRead);
       
     return (
+        <div>
         <div className="stats">
             <h2>Reading Stats</h2>
 

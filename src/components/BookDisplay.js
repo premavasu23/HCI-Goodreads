@@ -1,6 +1,5 @@
 import { Stack, Button, Box } from '@mui/material';
 import '../styles/BookDisplay.css'
-import BookList from "../data/BookList";
 import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
 import React, { useState, useEffect } from 'react';

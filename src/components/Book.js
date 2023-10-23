@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import '../styles/Book.css'
 import { Paper, List, ListItemButton, Modal, Box } from '@mui/material';
 import BookDisplay from '../components/BookDisplay'
-import BookList from "../data/BookList";
 import Rating from '@mui/material/Rating';
 
 

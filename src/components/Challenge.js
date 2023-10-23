@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../styles/Challenge.css'
-import BookList from '../data/BookList';
 import ProgressBar from './Progress';
 
 const Challenge = () => {
