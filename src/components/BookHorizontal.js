@@ -13,13 +13,11 @@ const BookHorizontal = (props) => {
         if (props.shelfType === 'isCurrentlyReading') {
             newBookList[ind].isCurrentlyReading = true;
             newBookList[ind].isTBR = false;
-            newBookList[ind].isAlreadyRead = false;
             newBookList[ind].isRecommended = false;
         }
         else if (props.shelfType === 'isTBR') {
             newBookList[ind].isCurrentlyReading = false;
             newBookList[ind].isTBR = true;
-            newBookList[ind].isAlreadyRead = false;
             newBookList[ind].isRecommended = false;
         }
         else if (props.shelfType === 'isAlreadyRead') {
@@ -31,7 +29,6 @@ const BookHorizontal = (props) => {
         else if (props.shelfType === 'isRecommended') {
             newBookList[ind].isCurrentlyReading = false;
             newBookList[ind].isTBR = false;
-            newBookList[ind].isAlreadyRead = false;
             newBookList[ind].isRecommended = true;
         }
 
