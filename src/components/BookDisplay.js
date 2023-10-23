@@ -201,7 +201,8 @@ const BookDisplay = (props) => {
                                         display: 'flex',
                                         alignItems: 'center',
                                     }}> 
-                                    <ReadingProgress />
+                                    <ReadingProgress book={props.book}/>
+ 
                                     </Box>
                                 )}
 

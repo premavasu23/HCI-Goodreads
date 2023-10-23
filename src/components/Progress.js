@@ -15,7 +15,7 @@ function Progress({ goal, progress }) {
       <p className='progress-percent'>
         {goal === 0 ? 0 : ((progress / goal) * 100).toFixed(2)}%
       </p>
-    </div>
+    </div>    
   );
 }
 

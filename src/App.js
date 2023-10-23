@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Stats from './components/Stats'
 import Challenge from './components/Challenge'
 import Recommendations from './components/Recommendations'
+import ReadingProgress from './components/ReadingProgress';
 import React, { useState, useEffect } from 'react';
 
 function App() {
