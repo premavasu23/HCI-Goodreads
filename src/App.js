@@ -32,7 +32,7 @@ function App() {
         <Shelf type="isAlreadyRead" shelfTitle="Already Read" bookList={bookList} setBookList={setBookList}></Shelf>
       </div>
       <div className = "right-side">
-        <Challenge></Challenge>
+        <Challenge bookList={bookList}></Challenge>
         <Stats bookList={bookList}></Stats>
         <Recommendations type="isRecommended" shelfTitle="Recommendations" bookList={bookList} setBookList={setBookList}></Recommendations>
       </div>

@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {Box, Typography, Button, Modal} from '@mui/material';
 import Book from '../components/Book'
 import AddBookModal from '../components/AddBookModal'
-import '../styles/Recommendations.css'
-import BookList from "../data/BookList";
-  
+import '../styles/Recommendations.css'  
 
 const Recommendations = (props) => {
 
@@ -23,16 +21,16 @@ const Recommendations = (props) => {
 
     useEffect(() => {
         if(props.type === "isCurrentlyReading") {
-            setShelfBookList(BookList.filter((b) => b.isCurrentlyReading === true))
+            setShelfBookList(props.bookList.filter((b) => b.isCurrentlyReading === true))
         }
         else if(props.type === "isTBR") {
-            setShelfBookList(BookList.filter((b) => b.isTBR === true))
+            setShelfBookList(props.bookList.filter((b) => b.isTBR === true))
         }
         else if(props.type === "isAlreadyRead") {
-            setShelfBookList(BookList.filter((b) => b.isAlreadyRead === true))
+            setShelfBookList(props.bookList.filter((b) => b.isAlreadyRead === true))
         }
         else if(props.type === "isRecommended") {
-            setShelfBookList(BookList.filter((b) => b.isAlreadyRead === true))
+            setShelfBookList(props.bookList.filter((b) => b.isRecommended === true))
         }
       }, [props]);
 
