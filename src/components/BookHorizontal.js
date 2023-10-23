@@ -19,6 +19,8 @@ const BookHorizontal = (props) => {
             newBookList[ind].isCurrentlyReading = false;
             newBookList[ind].isTBR = true;
             newBookList[ind].isRecommended = false;
+            newBookList[ind].isAlreadyRead = false;
+
         }
         else if (props.shelfType === 'isAlreadyRead') {
             newBookList[ind].isCurrentlyReading = false;
