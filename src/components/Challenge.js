@@ -23,7 +23,7 @@ const Challenge = () => {
             <div>
                 <input
                     type="number"
-                    placeholder="Set Your Annual Reading Goal"
+                    placeholder="Set a Reading Goal"
                     onChange={(e) => handleSetGoal(e.target.value)}
                 />
                 <button onClick={handleAddProgress}>+</button>  
