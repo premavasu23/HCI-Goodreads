@@ -42,10 +42,8 @@ const BookDisplay = (props) => {
 
     const handleAddClick = (e) => {
         // put add book logic here for tbr
-        const ind = BookList.indexOf(props.book);
-        console.log(BookList[ind]);
-        BookList[ind][props.shelfType] = true;
-        console.log(BookList[ind]);
+        const ind = props.bookList.indexOf(props.book);
+        props.bookList[ind][props.shelfType] = true;
 
     }
 
@@ -55,6 +53,34 @@ const BookDisplay = (props) => {
     function getLabelText(value) {
         return `${value} Star${value !== 1 ? 's' : ''}, ${labels[value]}`;
     }
+
+    const updateRating = (newValue) => {
+
+        const ind = props.bookList.indexOf(props.book);
+            
+        let newBookList = [...props.bookList];
+
+        
+        if (props.shelfType === 'isCurrentlyReading') {
+            
+        }
+        else if (props.shelfType === 'isTBR') {
+            
+        }
+        else if (props.shelfType === 'isAlreadyRead') {
+            newBookList[ind].personalRating = value;
+        }
+        else if (props.shelfType === 'isRecommended') {
+        
+        }
+
+        props.setBookList(newBookList)
+
+
+
+
+    }
+
     return (
         <div>
             {props.shelfType === "isRecommended" && (
@@ -142,6 +168,7 @@ const BookDisplay = (props) => {
                                         }} getLabelText={getLabelText}
                                             onChange={(event, newValue) => {
                                                 setValue(newValue);
+                                                updateRating()
                                             }}
                                             onChangeActive={(event, newHover) => {
                                                 setHover(newHover);

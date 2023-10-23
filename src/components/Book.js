@@ -59,7 +59,7 @@ const Book = (props) => {
                                         backgroundColor: "#F9F7F4",
                                     }}
                                 >
-                                    <Rating name="read-only" defaultValue={4.5} precision={0.5} size="small" readOnly sx={{
+                                    <Rating name="read-only" value={props.book.personalRating} precision={0.5} size="small" readOnly sx={{
                                         backgroundColor: "#F9F7F4", marginRight: "0.3rem"
                                     }} />
                                     
@@ -93,7 +93,7 @@ const Book = (props) => {
                 aria-describedby="modal-modal-description"
                 sx={{ overflow: "auto" }}
             >
-                <BookDisplay book={props.book} shelfType={props.shelfType} bookList={props.booklist} setBookList={props.setBookList} />
+                <BookDisplay book={props.book} shelfType={props.shelfType} bookList={props.bookList} setBookList={props.setBookList} />
             </Modal>
 
         </div>

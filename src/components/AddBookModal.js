@@ -63,12 +63,12 @@ const AddBookModal = (props) => {
             </Box>
             {(showSearchResults === false || searchValue.length === 0) && (
                 shelfBookList.map((b) => (
-                    <BookHorizontal book={b} shelfType={props.shelfType}></BookHorizontal>
+                    <BookHorizontal book={b} shelfType={props.shelfType} bookList={props.bookList} setBookList={props.setBookList}></BookHorizontal>
                 )))
             }
             {(showSearchResults === true) && (
                 searchResults.map((b) => (
-                    <BookHorizontal book={b} shelfType={props.shelfType}></BookHorizontal>
+                    <BookHorizontal book={b} shelfType={props.shelfType} bookList={props.bookList} setBookList={props.setBookList}></BookHorizontal>
                 )))
             }
 

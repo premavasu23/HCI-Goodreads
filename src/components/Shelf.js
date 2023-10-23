@@ -57,7 +57,7 @@ const Shelf = (props) => {
 
                 {
                     shelfBookList.map((b) => (
-                        <Book book={b} shelfType={props.type} bookList={props.bookList} setBookList={props.shelfBookList}></Book>
+                        <Book book={b} shelfType={props.type} bookList={props.bookList} setBookList={props.setBookList}></Book>
                     ))
                 }
 
@@ -70,7 +70,7 @@ const Shelf = (props) => {
                 aria-describedby="modal-modal-description"
                 sx={{overflow:"auto"}}
             >
-            <AddBookModal shelfType={props.type} shelfTitle={props.shelfTitle} shelfBookList={props.shelfBookList}/>
+            <AddBookModal shelfType={props.type} shelfTitle={props.shelfTitle} shelfBookList={props.shelfBookList} bookList={props.bookList} setBookList={props.setBookList}/>
         </Modal>
         </div>
     </div>
