@@ -45,7 +45,7 @@ const Recommendations = (props) => {
             <div className="books-container">
                 {
                     shelfBookList.map((b) => (
-                        <Book book={b} shelfType={props.type}></Book>
+                        <Book book={b} shelfType={props.type} bookList={props.bookList} setBookList={props.setBookList}></Book>
                     ))
                 }
             </div>

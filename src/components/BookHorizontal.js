@@ -56,7 +56,7 @@ const BookHorizontal = (props) => {
                             stars
                         </div>
                     </Stack>
-                    <Button variant="contained" sx={{"color": "#F9F7F4", "backgroundColor": "#75420e"}} onClick={handleAddClick}>+</Button>
+                    <Button variant="contained" sx={{"color": "#F9F7F4", "backgroundColor": "#75420e", "&:hover": {backgroundColor: '#553b08', color: 'white'}}} onClick={handleAddClick}>+</Button>
                 </Stack>
                 
             </Paper>

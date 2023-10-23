@@ -22,12 +22,38 @@ const boxStyle = {
 const BookDisplay = (props) => {
 
     const handleAddClick = (e) => {
-        // put add book logic here for tbr
-        const ind = BookList.indexOf(props.book);
-        console.log(BookList[ind]);
-        BookList[ind][props.shelfType] = true;
-        console.log(BookList[ind]);
+        console.log("HERE");
+        console.log(props.shelfType);
+        const ind = props.bookList.indexOf(props.book);
+            
+        let newBookList = [...props.bookList];
 
+        if (props.shelfType === 'isCurrentlyReading') {
+            newBookList[ind].isCurrentlyReading = true;
+            newBookList[ind].isTBR = false;
+            newBookList[ind].isAlreadyRead = false;
+            newBookList[ind].isRecommended = false;
+        }
+        else if (props.shelfType === 'isTBR') {
+            newBookList[ind].isCurrentlyReading = false;
+            newBookList[ind].isTBR = true;
+            newBookList[ind].isAlreadyRead = false;
+            newBookList[ind].isRecommended = false;
+        }
+        else if (props.shelfType === 'isAlreadyRead') {
+            newBookList[ind].isCurrentlyReading = false;
+            newBookList[ind].isTBR = false;
+            newBookList[ind].isAlreadyRead = true;
+            newBookList[ind].isRecommended = false;
+        }
+        else if (props.shelfType === 'isRecommended') {
+            newBookList[ind].isCurrentlyReading = false;
+            newBookList[ind].isTBR = true;
+            newBookList[ind].isAlreadyRead = false;
+            newBookList[ind].isRecommended = false;
+        }
+
+        props.setBookList(newBookList)
     }
     return (
         <div>

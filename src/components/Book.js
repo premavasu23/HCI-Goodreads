@@ -29,7 +29,7 @@ const Book = (props) => {
                     display: "grid",
                     justifyItems: "center",
                     alignContent: "space-between",
-                    margin: "2vw",
+                    margin: "0.5vw",
                 }}>
                 <img className="book-cover" src={require('../images/' + props.book.cover)}></img>
                 <div className="title">{props.book.title}</div>
@@ -47,7 +47,7 @@ const Book = (props) => {
                 aria-describedby="modal-modal-description"
                 sx={{overflow:"auto"}}
             >
-                <BookDisplay book={props.book} shelfType={props.shelfType}/>
+                <BookDisplay book={props.book} shelfType={props.shelfType} bookList={props.bookList} setBookList={props.setBookList}/>
         </Modal>
 
         </div>
