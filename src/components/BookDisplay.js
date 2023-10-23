@@ -193,7 +193,7 @@ const BookDisplay = (props) => {
                                         )}
                                     </Box>
                                 )
-                                }
+                                }Ï
                                 {(props.shelfType === "isCurrentlyReading") && (
                                     <Box
                                     sx={{
@@ -201,8 +201,9 @@ const BookDisplay = (props) => {
                                         display: 'flex',
                                         alignItems: 'center',
                                     }}> 
-                                    <ReadingProgress book={props.book}/>
- 
+                                    {/* <ReadingProgress book={props.book}/> */}
+                                    <ReadingProgress book={props.book} bookList={props.bookList} />
+
                                     </Box>
                                 )}
 

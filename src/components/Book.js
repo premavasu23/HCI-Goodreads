@@ -4,7 +4,7 @@ import { Paper, List, ListItemButton, Modal, Box } from '@mui/material';
 import BookDisplay from '../components/BookDisplay'
 import Rating from '@mui/material/Rating';
 import Progress from './Progress';
-
+import ReadingProgress from './ReadingProgress';
 
 const Book = (props) => {
     const [openBookDisplay, setOpenBookDisplay] = useState(false);
@@ -95,6 +95,7 @@ const Book = (props) => {
                             {(props.shelfType === "isCurrentlyReading") && (
                                 <Box>
                                     <Progress goal={props.book.pageLength} progress={props.book.progressPages}/>
+                                    {/* <ReadingProgress porps ={props.book} /> */}
                                 </Box>
                                 
                             )}

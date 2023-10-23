@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../styles/Stats.css'
+
 const Stats = (props) => {
 
-    //book length conditionals 
-
+    //book length breakdown 
     const bookslessThan100 = props.bookList.filter(book => book.pageLength > 0 && book.pageLength <= 100 && book.isAlreadyRead);
     const booksLessThan200 = props.bookList.filter(book => book.pageLength > 100 && book.pageLength <= 200 && book.isAlreadyRead);
     const booksLessThan300 = props.bookList.filter(book => book.pageLength > 200 && book.pageLength <= 300 && book.isAlreadyRead);
