@@ -128,7 +128,7 @@ const BookDisplay = (props) => {
                                 </Box>
                             </div>
                         </Stack>
-                        <Button variant="contained" sx={{ "color": "#F9F7F4", "backgroundColor": "#75420e" }} onClick={handleAddClick}>+</Button>
+                        <Button variant="contained" sx={{ "color": "#F9F7F4", "backgroundColor": "#75420e" }} onClick={handleAddClick}>Add to TBR</Button>
 
                     </Stack>
                 </Box>)}
