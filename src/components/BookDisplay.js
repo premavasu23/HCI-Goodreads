@@ -4,6 +4,7 @@ import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
 import React, { useState, useEffect } from 'react';
 import ReadingProgress from './ReadingProgress';
+import Progress from './Progress';
 
 
 const boxStyle = {
@@ -201,8 +202,16 @@ const BookDisplay = (props) => {
                                         display: 'flex',
                                         alignItems: 'center',
                                     }}> 
-                                    <ReadingProgress book={props.bookList}/>
-                                    {/* <ReadingProgress book={props.book} bookList={props.bookList} /> */}
+
+                                    <Progress goal={props.book.pageLength} progress={props.book.progressPages}/>
+
+                                    <input
+                                        type="number"
+                                        value={0}
+                                        onChange={(e) => console.log('here')}
+                                        />
+                                        <button onClick={()=> console.log('hereeee')}>Save</button>
+`
 
                                     </Box>
                                 )}

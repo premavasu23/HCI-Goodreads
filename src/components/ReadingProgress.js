@@ -1,49 +1,51 @@
 import React, { useEffect, useState } from 'react';
 import Progress from './Progress';
 
-const ReadingProgress = ({ book }) => {
+const ReadingProgress = (props) => {
 
-  const [newProgress, setNewProgress] = useState(book.progressPages);
-  const [isEditing, setIsEditing] = useState(false);
+  const [progress, setProgress] = useState(props.book.progressPages);
+  // const [isEditing, setIsEditing] = useState(false);
 
-  const handleEditProgress = () => {
-    setIsEditing(true);
-  };
+  // const handleEditProgress = () => {
+  //   setIsEditing(true);
+  // };
 
   const handleSaveProgress = () => {
 
-    const updatedBookList = book.bookList.map((item) => {
-        if (item.id === book.id) {
-          return { ...item, progressPages: newProgress };
-        }
-        return item;
-      });
-      book.setBookList(updatedBookList);
-      setIsEditing(false);
-  };
+  //   const updatedBookList = book.bookList.map((item) => {
+  //       if (item.id === book.id) {
+  //         return { ...item, progressPages: newProgress };
+  //       }
+  //       return item;
+  //     });
+  //     book.setBookList(updatedBookList);
+  //     setIsEditing(false);
+  // };
 
   return (
     <div>
-      <h3>{book.title}</h3>
-      <p>  {book.bookList} </p>
-      {isEditing ? (
+      <h3>{props.book.title}</h3>
+      <p>  {props.book.bookList} </p>
+
         <div>
           <input
             type="number"
-            value={newProgress}
-            onChange={(e) => setNewProgress(e.target.value)}
+            value={progress}
+            onChange={(e) => setProgress(e.target.value)}
           />
           <button onClick={handleSaveProgress}>Save</button>
         </div>
-      ) : (
         <div>
-          <Progress goal={book.pageLength} progress={newProgress} />
-          <button onClick={handleEditProgress}>Edit Progress</button>
+          <Progress goal={props.book.pageLength} progress={props.book.progressPages} />
+
+          {/* <button onClick={handleEditProgress}>Edit Progress</button> */}
 
         </div>
-      )}
+      
     </div>
   );
 };
+
+}
 
 export default ReadingProgress;
