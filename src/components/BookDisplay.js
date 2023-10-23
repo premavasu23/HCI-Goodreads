@@ -1,9 +1,9 @@
-import React from "react";
 import { Stack, Button, Box } from '@mui/material';
 import '../styles/BookDisplay.css'
 import BookList from "../data/BookList";
 import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
+import React, { useState, useEffect } from 'react';
 
 
 const boxStyle = {
@@ -46,7 +46,7 @@ const BookDisplay = (props) => {
 
     }
 
-    const [value, setValue] = React.useState(2);
+    // const [value, setValue] = useState();
     const [hover, setHover] = React.useState(-1);
 
     function getLabelText(value) {
@@ -60,13 +60,10 @@ const BookDisplay = (props) => {
         let newBookList = [...props.bookList];
 
         if (props.shelfType === 'isAlreadyRead') {
-            newBookList[ind].personalRating = value;
+            newBookList[ind].personalRating = newValue;
         }
 
         props.setBookList(newBookList)
-
-
-
 
     }
 
@@ -156,8 +153,8 @@ const BookDisplay = (props) => {
                                             marginRight: "0.3rem"
                                         }} getLabelText={getLabelText}
                                             onChange={(event, newValue) => {
-                                                setValue(newValue);
-                                                updateRating()
+                                                props.setValue(newValue);
+                                                updateRating(newValue)
                                             }}
                                             onChangeActive={(event, newHover) => {
                                                 setHover(newHover);
