@@ -1,119 +1,37 @@
 import React, { useState } from 'react';
 import '../styles/Challenge.css'
 import BookList from '../data/BookList';
-// import BookSelector from './BookSelector'
+import ProgressBar from './Progress';
 
-// function Challenge() {
-//   const [goal, setGoal] = useState(0);
-//   const [progress, setProgress] = useState(0);
-//   const [selectedBook, setSelectedBook] = useState('');
+const Challenge = () => {
+  const [goal, setGoal] = useState(20);
+  const [progress, setProgress] = useState(5);
 
-//   const handleGoalChange = (e) => {
-//     const newGoal = parseInt(e.target.value, 10);
-//     if (!isNaN(newGoal)) {
-//       setGoal(newGoal);
-//     }
-//   };
+  const handleSetGoal = (newGoal) => {
+    setGoal(newGoal);
+  };
 
-//   const updateProgress = (e) => {
-//     const newProgress = parseInt(e.target.value, 10);
-//     if (!isNaN(newProgress) && newProgress >= 0 && newProgress <= goal) {
-//       setProgress(newProgress);
-//     }
-//   };
+  const handleAddProgress = () => {
+    setProgress(progress + 1);
+  };
 
-//   const handleAddBook = (bookTitle) => {
-//     const selectedBookData = bookList.find((book) => book.title === bookTitle);
-//     if (selectedBookData) {
-//       setSelectedBook(selectedBookData);
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <label>
-//         Set Your Annual Reading Goal:
-//         <input
-//           type="number"
-//           value={goal}
-//           onChange={handleGoalChange}
-//           min="0"
-//         />
-//       </label>
-//       <label>
-//         Update Your Reading Progress:
-//         <input
-//           type="number"
-//           value={progress}
-//           onChange={updateProgress}
-//           min="0"
-//           max={goal}
-//         />
-//       </label>
-//       <div className="progress-bar">
-//         <div
-//           className="progress"
-//           style={{ width: `${(progress / goal) * 100}%` }}
-//         />
-//       </div>
-//       <BookSelector bookList={bookList} onAddBook={handleAddBook} />
-//       {selectedBook && (
-//         <div>
-//           Selected Book: {selectedBook.title}, Page Count: {selectedBook.pageCount}
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
-
-// export default Challenge;
-
-
-
-function Challenge() {
-    const [goal, setGoal] = useState(0);
-    const [progress, setProgress] = useState(0);
-  
-    const handleGoalChange = (e) => {
-      const newGoal = parseInt(e.target.value, 10);
-      if (!isNaN(newGoal)) {
-        setGoal(newGoal);
-      }
-    };
-  
-    const updateProgress = (e) => {
-      const newProgress = parseInt(e.target.value, 10);
-      if (!isNaN(newProgress) && newProgress >= 0 && newProgress <= goal) {
-        setProgress(newProgress);
-      }
-    };
-  
-    return (
-      <div className='challenge'>
-        
-        <input
-            type="number"
-            value={progress}
-            onChange={updateProgress}
-            min="0"
-            max={goal}
-        />
-        <input
-            type="number"
-            value={goal}
-            onChange={handleGoalChange}
-            min="0"
-        />  
-      
-        <div className="progress-bar">
-          <div
-            className="progress"
-            style={{ width: `${(progress / goal) * 100}%` }}
-          />
+  return (
+    <div className="challenge">
+        <div>
+            <h3>Reading Challenge</h3>
+            <ProgressBar goal={goal} progress={progress} />
+            <div>
+                <input
+                    type="number"
+                    placeholder="Set a Reading Goal"
+                    onChange={(e) => handleSetGoal(e.target.value)}
+                />
+                <button onClick={handleAddProgress}>+</button>  
+                {/* need to make this add book  */}
+            </div>
         </div>
-      </div>
-    );
-  }
-  
-  export default Challenge;
+    </div>
+  );
+}
 
+export default Challenge;
