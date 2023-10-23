@@ -28,6 +28,8 @@ const Challenge = (props) => {
     <div className="challenge">
         <div>
             <h3>Reading Challenge</h3>
+            <p>  Progress: {progress} / {goal} Books</p>
+
             <ProgressBar goal={goal} progress={progress} />
             <div>
                 {/* <input

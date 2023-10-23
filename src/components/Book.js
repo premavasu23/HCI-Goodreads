@@ -3,6 +3,7 @@ import '../styles/Book.css'
 import { Paper, List, ListItemButton, Modal, Box } from '@mui/material';
 import BookDisplay from '../components/BookDisplay'
 import Rating from '@mui/material/Rating';
+import Progress from './Progress';
 
 
 const Book = (props) => {
@@ -91,6 +92,12 @@ const Book = (props) => {
                                 </Box>
                             )
                             }
+                            {(props.shelfType === "isCurrentlyReading") && (
+                                <Box>
+                                    <Progress goal={props.book.pageLength} progress={props.book.progressPages}/>
+                                </Box>
+                                
+                            )}
                         </div>
                     </Paper>
                 </ListItemButton>

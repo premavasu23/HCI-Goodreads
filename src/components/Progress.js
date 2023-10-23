@@ -6,15 +6,14 @@ function Progress({ goal, progress }) {
 
   return (
     <div>
-      <div className="progress-bar">
+      <div className="progress">
         <div
-          className="progress"
+          className="progress-bar"
           style={{ width: `${percentage}%` }}
         />
       </div>
-      <p className='current-progress'>
-        Progress: {progress} / {goal} books (
-        {goal === 0 ? 0 : ((progress / goal) * 100).toFixed(2)}%)
+      <p className='progress-percent'>
+        {goal === 0 ? 0 : ((progress / goal) * 100).toFixed(2)}%
       </p>
     </div>
   );

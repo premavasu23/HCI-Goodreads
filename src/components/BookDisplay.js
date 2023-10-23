@@ -3,6 +3,7 @@ import '../styles/BookDisplay.css'
 import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
 import React, { useState, useEffect } from 'react';
+import ReadingProgress from './ReadingProgress';
 
 
 const boxStyle = {
@@ -193,6 +194,16 @@ const BookDisplay = (props) => {
                                     </Box>
                                 )
                                 }
+                                {(props.shelfType === "isCurrentlyReading") && (
+                                    <Box
+                                    sx={{
+                                        width: 100,
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                    }}> 
+                                    <ReadingProgress />
+                                    </Box>
+                                )}
 
                             </div>
                         </Stack>
