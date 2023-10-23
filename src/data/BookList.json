@@ -8,7 +8,7 @@
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": true,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
@@ -24,12 +24,12 @@
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": true,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },    
     {
         "title": "Percy Jackson and the Titans Curse",
@@ -44,8 +44,8 @@
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },    
     {
         "title": "Percy Jackson and the Battle of the Labrynth",
@@ -60,8 +60,8 @@
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },    
     {
         "title": "Percy Jackson and the Last Olympian",
@@ -76,8 +76,8 @@
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },    
     {
         "title": "The Hunger Games",
@@ -88,12 +88,12 @@
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": true,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },    
     {
         "title": "Catching Fire",
@@ -108,8 +108,8 @@
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },    
     {
         "title": "MockingJay",
@@ -124,8 +124,8 @@
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },
     {
         "title": "All About Love",
@@ -136,12 +136,12 @@
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": true,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },
     {
         "title": "Children of Blood and Bone",
@@ -152,12 +152,12 @@
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": true,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },
     {
         "title": "Children of Virtue and Vengence ",
@@ -168,12 +168,12 @@
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": true,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },
     {
         "title": "Get a life Chloe Brown",
@@ -184,12 +184,12 @@
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": true,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },
     {
         "title": "Take a Hint Dani Brown",
@@ -200,12 +200,12 @@
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": true,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },
     {
         "title": "Act Your Age Eve Brown",
@@ -216,12 +216,12 @@
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": true,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },
     {
         "title": "Circe",
@@ -232,12 +232,12 @@
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": true,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },
     {
         "title": "Fourth Wing",
@@ -248,12 +248,12 @@
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": true,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },
     {
         "title": "Pride and Prejudice",
@@ -264,12 +264,12 @@
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": true,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },
     {
         "title": "Sense and Sensibility",
@@ -280,12 +280,12 @@
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": true,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },
     {
         "title": "Six of Crows",
@@ -296,12 +296,12 @@
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": true,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },
     {
         "title": "Crooked Kingdom",
@@ -312,12 +312,12 @@
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": true,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     },
     {
         "title": "The No Show",
@@ -328,12 +328,12 @@
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": true,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 100,
         "progressPages": 20,
         "progressPercent": 0.20,
-        "communityStar": 4.5,
-        "userStar": 3
+        "genres": ["Fiction", "Fantasy"],
+        "numRatings": "2.7M"
     }
     
   ]

@@ -39,7 +39,6 @@ const labels = {
 
 const BookDisplay = (props) => {
 
-
     const handleAddClick = (e) => {
         // put add book logic here for tbr
         const ind = props.bookList.indexOf(props.book);
@@ -60,18 +59,8 @@ const BookDisplay = (props) => {
             
         let newBookList = [...props.bookList];
 
-        
-        if (props.shelfType === 'isCurrentlyReading') {
-            
-        }
-        else if (props.shelfType === 'isTBR') {
-            
-        }
-        else if (props.shelfType === 'isAlreadyRead') {
+        if (props.shelfType === 'isAlreadyRead') {
             newBookList[ind].personalRating = value;
-        }
-        else if (props.shelfType === 'isRecommended') {
-        
         }
 
         props.setBookList(newBookList)
