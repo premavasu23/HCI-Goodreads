@@ -9,9 +9,9 @@
         "isTBR": false,
         "isAlreadyRead": true,
         "isRecommended": false,
-        "pageLength": 279,
-        "progressPages": 0,
-        "progressPercent": 0,
+        "pageLength": 377,
+        "progressPages": 56,
+        "progressPercent": 15,
         "genres": ["Fiction", "Fantasy"],
         "numRatings": "2.7M"
     },
@@ -40,28 +40,28 @@
         "isCurrentlyReading": true, 
         "isTBR": false,
         "isAlreadyRead": false,
-        "isRecommended": true,
+        "isRecommended": false,
         "pageLength": 213,
         "progressPages": 0,
         "progressPercent": 0,
         "genres": ["Fiction", "Fantasy"],
-        "numRatings": "2.7M"
+        "numRatings": "973K"
     },    
     {
         "title": "Percy Jackson and the Battle of the Labrynth",
         "author": "Rick Riordan",
         "cover": "pjo_4.jpg",
-        "generalRating": 2.5,
-        "personalRating": 2.5,
+        "generalRating": 4.5,
+        "personalRating": 4,
         "isCurrentlyReading": false, 
         "isTBR": false,
         "isAlreadyRead": false,
         "isRecommended": true,
-        "pageLength": 100,
+        "pageLength": 361,
         "progressPages": 20,
         "progressPercent": 0.20,
         "genres": ["Fiction", "Fantasy"],
-        "numRatings": "2.7M"
+        "numRatings": "1.01M"
     },    
     {
         "title": "Percy Jackson and the Last Olympian",

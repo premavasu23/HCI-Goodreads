@@ -30,7 +30,7 @@ const Recommendations = (props) => {
             setShelfBookList(props.bookList.filter((b) => b.isAlreadyRead === true))
         }
         else if(props.type === "isRecommended") {
-            setShelfBookList(props.bookList.filter((b) => b.isAlreadyRead === true))
+            setShelfBookList(props.bookList.filter((b) => b.isRecommended === true))
         }
       }, [props]);
 
