@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Progress from './Progress';
 
 const ReadingProgress = ({ book }) => {
-    const { books, bookList } = book;
 
   const [newProgress, setNewProgress] = useState(book.progressPages);
   const [isEditing, setIsEditing] = useState(false);
@@ -12,22 +11,9 @@ const ReadingProgress = ({ book }) => {
   };
 
   const handleSaveProgress = () => {
-    // Update the reading progress for the book in your state or data
-    // For example, if your book is stored in bookList state:
-    // const updatedBookList = book.bookList.map((item) => {
-    //   if (item.id === book.id) {
-    //     return { ...item, progressPages: newProgress };
-    //   }
-    //   return item;
-    // });
 
-    // // Update the state with the new progress
-    // book.setBookList(updatedBookList);
-
-    // // Exit edit mode
-    // setIsEditing(false);
-    const updatedBookList = bookList.map((item) => {
-        if (item.id === books.id) {
+    const updatedBookList = book.bookList.map((item) => {
+        if (item.id === book.id) {
           return { ...item, progressPages: newProgress };
         }
         return item;

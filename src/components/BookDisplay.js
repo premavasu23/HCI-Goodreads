@@ -201,8 +201,8 @@ const BookDisplay = (props) => {
                                         display: 'flex',
                                         alignItems: 'center',
                                     }}> 
-                                    {/* <ReadingProgress book={props.book}/> */}
-                                    <ReadingProgress book={props.book} bookList={props.bookList} />
+                                    <ReadingProgress book={props.bookList}/>
+                                    {/* <ReadingProgress book={props.book} bookList={props.bookList} /> */}
 
                                     </Box>
                                 )}
