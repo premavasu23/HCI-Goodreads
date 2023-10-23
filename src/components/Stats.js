@@ -1,6 +1,6 @@
 // import React, { useState, useEffect } from 'react';
 import '../styles/Stats.css'
-
+import BookList from '../data/BookList'
 const Stats = (props) => {
 
     //book length conditionals 
@@ -13,8 +13,8 @@ const Stats = (props) => {
     const booksLessThan600 = BookList.filter(book => book.pageLength > 500 && book.pageLength <= 600 && book.isAlreadyRead);
     const booksGreaterThan600 = BookList.filter(book => book.pageLength > 600 && book.isAlreadyRead);
    
-//     //genre breakdown
-//     const fictionBooks = BookList.filter(book => book.genres.includes("Fiction") && book.isAlreadyRead);
+    //genre breakdown
+    // const fictionBooks = BookList.filter(book => book.genres.includes("Fiction") && book.isAlreadyRead);
 //     const nonFictionBooks = BookList.filter(book => book.genres.includes("Non-Fiction") && book.isAlreadyRead);
 //     const essayBooks = BookList.filter(book => book.genres.includes("Fantasy") && book.isAlreadyRead);
 //     const classicBooks = BookList.filter(book => book.genres.includes("Fantasy") && book.isAlreadyRead);
@@ -28,6 +28,7 @@ const Stats = (props) => {
     return (
         <div className="stats">
             <h2>Reading Stats</h2>
+
             {/* <div className='genre'>        
                 <h4>Genre Breakdown</h4>
                 <div>{"Non-Fiction: " + nonFictionBooks.length}</div><br/>

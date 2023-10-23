@@ -1,9 +1,10 @@
 .challenge{
-    width: 25vw;
+    width: 29vw;
     height: 8.5vw;
-    margin-left: 2vw;
+    /* margin-left: 2vw; */
     padding: 1vw;
     display: flex;
+    border-radius: 0.25vw;
     flex-direction: column;
     border-radius: 0.25vw;
     border-width: 1px;
@@ -20,12 +21,12 @@
     margin-bottom: 5px;
   }
   
-  .progress {
+.progress {
     height: 100%;
     background-color: #007bff;
-  }
+}
   
-  .current-progress{
+.current-progress{
     font-size: small;
-  }
+}
   
