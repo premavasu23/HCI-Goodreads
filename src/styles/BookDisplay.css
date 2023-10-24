@@ -38,7 +38,8 @@
 }    
   
 .reading-fraction {
-    margin-bottom: 5px; 
+    margin-bottom: 1vw;
+    margin-left: 0.5vw; 
 }
   
 .new-update {
@@ -50,3 +51,8 @@
     margin-top: 5px; 
   }
   
+.progress-pages-fraction-bar {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}

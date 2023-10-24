@@ -8,6 +8,8 @@ import Progress from './Progress';
 const Book = (props) => {
     const [openBookDisplay, setOpenBookDisplay] = useState(false);
     const [value, setValue] = useState();
+    const [progress, setProgress] = useState(props.book.progressPages);
+
     const handleBookClose = () => setOpenBookDisplay(false);
     const handleBookPress = () => {
         setOpenBookDisplay(true);
@@ -27,7 +29,7 @@ const Book = (props) => {
     };
     useEffect(() => {
         console.log("Re-rendering Book")
-    }, [value]);
+    }, []);
 
     return (
         <div>
@@ -82,7 +84,9 @@ const Book = (props) => {
                             )
                             }
                             {(props.shelfType === "isCurrentlyReading") && (
-                                <Box>
+                                <Box sx={{
+                                    backgroundColor: "#F9F7F4"
+                                }}>
                                     <Progress goal={props.book.pageLength} progress={props.book.progressPages} />
                                 </Box>
 
@@ -98,7 +102,7 @@ const Book = (props) => {
                 aria-describedby="modal-modal-description"
                 sx={{ overflow: "auto" }}
             >
-                <BookDisplay book={props.book} shelfType={props.shelfType} bookList={props.bookList} setBookList={props.setBookList} value={value} setValue={setValue} />
+                <BookDisplay book={props.book} shelfType={props.shelfType} bookList={props.bookList} setBookList={props.setBookList} value={value} setValue={setValue} progress={progress} setProgress={setProgress}/>
             </Modal>
         </div>
 

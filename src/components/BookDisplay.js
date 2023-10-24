@@ -93,16 +93,17 @@ const BookDisplay = (props) => {
 
     //reading progress
     const [newProgress, setNewProgress] = useState(props.book.progressPages);
-    const [isEditing, setIsEditing] = useState(false);
-    const handleEditProgress = () => {
-        setIsEditing(true);
-    };
+
     const handleSaveProgress = () => {
         // Validate the input here, e.g., check if it's a valid number
         const newProgressValue = parseInt(newProgress, 10);
         if (!isNaN(newProgressValue) && newProgressValue >= 0 && newProgressValue <= props.book.pageLength) {
             setNewProgress(newProgressValue);
-            setIsEditing(false);
+
+            const ind = props.bookList.indexOf(props.book);
+            let newBookList = [...props.bookList];
+            newBookList[ind].progressPages = newProgressValue;
+            props.setBookList(newBookList);
         }
     };
 
@@ -207,23 +208,19 @@ const BookDisplay = (props) => {
                                         )}
                                     </Box>
                                 )
-                                }Ï
+                                }
                                 {(props.shelfType === "isCurrentlyReading") && (
-                                    <Box className="currently-reading"
-                                        sx={{
-                                            width: 100,
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                        }}>
-                                        <div className='reading-fraction'>{newProgress} / {props.book.pageLength}</div>
-                                        <Progress goal={props.book.pageLength} progress={newProgress} /> <br />
+                                    <Box className="currently-reading">
+                                        <div className="progress-pages-fraction-bar" >
+                                            <div className='reading-fraction'>{newProgress} / {props.book.pageLength}</div>
+                                            <Progress goal={props.book.pageLength} progress={newProgress} /> <br />
+                                        </div>
                                         <input className='new-update'
                                             type="number"
                                             value={newProgress}
                                             onChange={(e) => setNewProgress(e.target.value)}
                                         />
                                         <button onClick={handleSaveProgress}>update</button>
-                                        {/* reading progress end */}
                                     </Box>
                                 )}
                             </div>
