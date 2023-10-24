@@ -53,6 +53,7 @@
 
 .shelf-count {
   padding-left: 1vw;
-  margin: 0;
+  margin: 1;
+  font-size: x-small;
   color: #907564;
 }

@@ -28,18 +28,12 @@ const Challenge = (props) => {
     <div className="challenge">
         <div>
             <h3>Reading Challenge</h3>
+            <p>  Progress: {progress} / {goal} Books</p>
             <ProgressBar goal={goal} progress={progress} />
-            <div>
-                {/* <input
-                    type="number"
-                    placeholder="Set a Reading Goal"
-                    onChange={(e) => handleSetGoal(e.target.value)}
-                /> */}
+            <div>  
                 <text>Adjust your reading goal: </text>
-                {/* <button onClick={handleAddProgress}>+</button>  */}
                 <button className='goal-button' onClick={() => handleSetGoal(goal-1)}>-</button> 
                 <button className='goal-button' onClick={() => handleSetGoal(goal+1)}>+</button>
-                {/* need to make this add book  */}
             </div>
         </div>
     </div>

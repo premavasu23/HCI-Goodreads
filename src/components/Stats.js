@@ -1,9 +1,9 @@
-// import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../styles/Stats.css'
+
 const Stats = (props) => {
 
-    //book length conditionals 
-
+    //book length breakdown 
     const bookslessThan100 = props.bookList.filter(book => book.pageLength > 0 && book.pageLength <= 100 && book.isAlreadyRead);
     const booksLessThan200 = props.bookList.filter(book => book.pageLength > 100 && book.pageLength <= 200 && book.isAlreadyRead);
     const booksLessThan300 = props.bookList.filter(book => book.pageLength > 200 && book.pageLength <= 300 && book.isAlreadyRead);
@@ -13,34 +13,35 @@ const Stats = (props) => {
     const booksGreaterThan600 = props.bookList.filter(book => book.pageLength > 600 && book.isAlreadyRead);
    
     //genre breakdown
-    // const fictionBooks = BookList.filter(book => book.genres.includes("Fiction") && book.isAlreadyRead);
-//     const nonFictionBooks = BookList.filter(book => book.genres.includes("Non-Fiction") && book.isAlreadyRead);
-//     const essayBooks = BookList.filter(book => book.genres.includes("Fantasy") && book.isAlreadyRead);
-//     const classicBooks = BookList.filter(book => book.genres.includes("Fantasy") && book.isAlreadyRead);
-//     const romanceBooks = BookList.filter(book => book.genres.includes("Fantasy") && book.isAlreadyRead);
-//     const dystopianBooks = BookList.filter(book => book.genres.includes("Dystopian") && book.isAlreadyRead);
-//     const sciFiBooks = BookList.filter(book => book.genres.includes("Science-Fiction") && book.isAlreadyRead);
-//     const fantasyBooks = BookList.filter(book => book.genres.includes("Fantasy") && book.isAlreadyRead);
-//     const historicalBooks = BookList.filter(book => book.genres.includes("Historical") && book.isAlreadyRead);
+    const fictionBooks = props.bookList.filter(book => book.genres.includes("Fiction") && book.isAlreadyRead);
+    const nonFictionBooks = props.bookList.filter(book => book.genres.includes("Non-Fiction") && book.isAlreadyRead);
+    const essayBooks = props.bookList.filter(book => book.genres.includes("Fantasy") && book.isAlreadyRead);
+    const classicBooks = props.bookList.filter(book => book.genres.includes("Fantasy") && book.isAlreadyRead);
+    const romanceBooks = props.bookList.filter(book => book.genres.includes("Fantasy") && book.isAlreadyRead);
+    const dystopianBooks = props.bookList.filter(book => book.genres.includes("Dystopian") && book.isAlreadyRead);
+    const sciFiBooks = props.bookList.filter(book => book.genres.includes("Science-Fiction") && book.isAlreadyRead);
+    const fantasyBooks = props.bookList.filter(book => book.genres.includes("Fantasy") && book.isAlreadyRead);
+    const historicalBooks = props.bookList.filter(book => book.genres.includes("Historical") && book.isAlreadyRead);
       
     return (
         <div className="stats">
-            <h2>Reading Stats</h2>
+            <h2>Reading Stats</h2><br/>
+            {/* <div>{"Fiction: " + fictionBooks.length}</div><br/> */}
 
-            {/* <div className='genre'>        
-                <h4>Genre Breakdown</h4>
-                {/* <div>{"Non-Fiction: " + nonFictionBooks.length}</div><br/>
+            <div className='genre'>        
+                <h4>Genre Breakdown</h4><br/>
+                <div>{"Non-Fiction: " + nonFictionBooks.length}</div><br/>
                 <div>{"Fiction: " + fictionBooks.length}</div><br/>
                 <div>{"Classics: " + classicBooks.length}</div><br/>
                 <div>{"Romance:" + romanceBooks.length}</div><br/>
                 <div>{"Historical: " + historicalBooks.length}</div><br/>
                 <div>{"Fantasy: " + fantasyBooks.length}</div><br/>
                 <div>{"Dystopian: " + dystopianBooks.length}</div><br/>
-                <div>{"Science Fiction: " + sciFiBooks.length}</div> */}
+                <div>{"Science Fiction: " + sciFiBooks.length}</div><br/>
               
-            {/* </div> */}
+            </div>
             <div className='book-length'>        
-                <h4>Avg Book Length</h4>
+                <h4>Avg Book Length</h4><br/>
                 <div>{"1 - 100 pages: " +  bookslessThan100.length}</div><br/>
                 <div>{"101 - 200 pages: " + booksLessThan200.length }</div><br/>                
                 <div>{"201 - 300 pages: " + booksLessThan300.length }</div><br/>
