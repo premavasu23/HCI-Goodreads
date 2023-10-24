@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## GitHub Repository
-The code is stored in a public GitHub Repository linked below: 
+The code is stored in a public GitHub Repository linked here:    
 https://github.com/premavasu23/HCI-Goodreads
 
 
