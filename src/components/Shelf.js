@@ -45,21 +45,17 @@ const Shelf = (props) => {
       }, [props]);
 
 
-
-    
-    
     return (
     <div className="shelf">
         <h3 className="shelf-title">{props.shelfTitle}</h3>
+        <p className='shelf.count'>{shelfBookList.length + " books"}</p>
         <div className="shelf-content">
             <div className="books-container">
-
                 {
                     shelfBookList.map((b) => (
                         <Book book={b} shelfType={props.type} bookList={props.bookList} setBookList={props.setBookList}></Book>
                     ))
                 }
-
             </div>
             <Button className="add-button" variant="contained" sx={{"color": "#F9F7F4", "backgroundColor": "#75420e", "&:hover": {backgroundColor: '#553b08', color: 'white'}}} onClick={handleAddPress}>+</Button>
             <Modal 

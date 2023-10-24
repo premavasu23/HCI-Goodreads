@@ -1,6 +1,6 @@
 .challenge{
     width: 29vw;
-    height: 8.5vw;
+    height: 10vw;
     /* margin-left: 2vw; */
     padding: 1vw;
     display: flex;
@@ -12,6 +12,7 @@
     border-style: solid;
     border-color: #75420e;
     color: 	#553b08;
+    margin-bottom: 1vw;
     overflow-y: scroll;
 }
 .progress {

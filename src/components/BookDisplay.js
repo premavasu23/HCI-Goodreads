@@ -42,7 +42,7 @@ const BookDisplay = (props) => {
 
     const handleAddClick = (e) => {
         const ind = props.bookList.indexOf(props.book);
-            
+
         let newBookList = [...props.bookList];
 
         if (props.shelfType === 'isCurrentlyReading') {
@@ -73,7 +73,6 @@ const BookDisplay = (props) => {
         props.setBookList(newBookList)
     }
 
-    // const [value, setValue] = useState();
     const [hover, setHover] = React.useState(-1);
 
     function getLabelText(value) {
@@ -83,16 +82,30 @@ const BookDisplay = (props) => {
     const updateRating = (newValue) => {
 
         const ind = props.bookList.indexOf(props.book);
-            
+
         let newBookList = [...props.bookList];
 
         if (props.shelfType === 'isAlreadyRead') {
             newBookList[ind].personalRating = newValue;
         }
-
         props.setBookList(newBookList)
-
     }
+
+    //reading progress
+    const [newProgress, setNewProgress] = useState(props.book.progressPages);
+    const [isEditing, setIsEditing] = useState(false);
+    const handleEditProgress = () => {
+        setIsEditing(true);
+    };
+    const handleSaveProgress = () => {
+        // Validate the input here, e.g., check if it's a valid number
+        const newProgressValue = parseInt(newProgress, 10);
+        if (!isNaN(newProgressValue) && newProgressValue >= 0 && newProgressValue <= props.book.pageLength) {
+            setNewProgress(newProgressValue);
+            setIsEditing(false);
+        }
+    };
+
 
     return (
         <div>
@@ -196,34 +209,29 @@ const BookDisplay = (props) => {
                                 )
                                 }Ï
                                 {(props.shelfType === "isCurrentlyReading") && (
-                                    <Box
-                                    sx={{
-                                        width: 100,
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                    }}> 
-
-                                    <Progress goal={props.book.pageLength} progress={props.book.progressPages}/>
-
-                                    <input
-                                        type="number"
-                                        value={0}
-                                        onChange={(e) => console.log('here')}
+                                    <Box className="currently-reading"
+                                        sx={{
+                                            width: 100,
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                        }}>
+                                        <div className='reading-fraction'>{newProgress} / {props.book.pageLength}</div>
+                                        <Progress goal={props.book.pageLength} progress={newProgress} /> <br />
+                                        <input className='new-update'
+                                            type="number"
+                                            value={newProgress}
+                                            onChange={(e) => setNewProgress(e.target.value)}
                                         />
-                                        <button onClick={()=> console.log('hereeee')}>Save</button>
-`
-
+                                        <button onClick={handleSaveProgress}>update</button>
+                                        {/* reading progress end */}
                                     </Box>
                                 )}
-
                             </div>
                         </Stack>
                     </Stack>
                 </Box>)}
         </div>
-
     );
 };
-
 
 export default BookDisplay;

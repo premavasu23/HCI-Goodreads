@@ -1,8 +1,8 @@
 import React from 'react';
 import '../styles/Challenge.css'
 
-function Progress({ goal, progress }) {
-  const percentage = (progress / goal) * 100 || 0;
+const Progress = (props) =>{
+  const percentage = (props.progress / props.goal) * 100 || 0;
 
   return (
     <div>
@@ -13,7 +13,7 @@ function Progress({ goal, progress }) {
         />
       </div>
       <p className='progress-percent'>
-        {goal === 0 ? 0 : ((progress / goal) * 100).toFixed(2)}%
+        {props.goal === 0 ? 0 : ((props.progress / props.goal) * 100).toFixed(2)}%
       </p>
     </div>    
   );

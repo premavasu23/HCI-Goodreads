@@ -4,21 +4,15 @@ import { Paper, List, ListItemButton, Modal, Box } from '@mui/material';
 import BookDisplay from '../components/BookDisplay'
 import Rating from '@mui/material/Rating';
 import Progress from './Progress';
-import ReadingProgress from './ReadingProgress';
 
 const Book = (props) => {
     const [openBookDisplay, setOpenBookDisplay] = useState(false);
     const [value, setValue] = useState();
-
-
     const handleBookClose = () => setOpenBookDisplay(false);
-
-
     const handleBookPress = () => {
         setOpenBookDisplay(true);
 
     }
-
     const labels = {
         0.5: '0.5',
         1: ' 1',
@@ -31,14 +25,9 @@ const Book = (props) => {
         4.5: ' 4.5',
         5: ' 5',
     };
-
     useEffect(() => {
-
-    
         console.log("Re-rendering Book")
-    
-    
-      }, [value]);
+    }, [value]);
 
     return (
         <div>
@@ -72,7 +61,7 @@ const Book = (props) => {
                                     <Rating name="read-only" value={props.book.personalRating} precision={0.5} size="small" readOnly sx={{
                                         backgroundColor: "#F9F7F4", marginRight: "0.3rem"
                                     }} />
-                                    
+
                                     <Box sx={{ alignContent: "center" }}>{labels[props.book.personalRating]}</Box>
                                 </Box>
 
@@ -94,10 +83,9 @@ const Book = (props) => {
                             }
                             {(props.shelfType === "isCurrentlyReading") && (
                                 <Box>
-                                    <Progress goal={props.book.pageLength} progress={props.book.progressPages}/>
-                                    {/* <ReadingProgress porps ={props.book} /> */}
+                                    <Progress goal={props.book.pageLength} progress={props.book.progressPages} />
                                 </Box>
-                                
+
                             )}
                         </div>
                     </Paper>
@@ -110,10 +98,8 @@ const Book = (props) => {
                 aria-describedby="modal-modal-description"
                 sx={{ overflow: "auto" }}
             >
-                <BookDisplay book={props.book} shelfType={props.shelfType} bookList={props.bookList} setBookList={props.setBookList} value={value} setValue={setValue}/>
+                <BookDisplay book={props.book} shelfType={props.shelfType} bookList={props.bookList} setBookList={props.setBookList} value={value} setValue={setValue} />
             </Modal>
-
-
         </div>
 
     );
